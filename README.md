@@ -1,26 +1,26 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/teYJD0R3)
-# Título do Projeto
+# VivaBH
 
-`CURSO`
+`Analise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Front-end`
 
-`SEMESTRE`
+`Primeiro semestre`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Igor Fonseca Amorim
+* João Pedro Menezes Matias da Silva
+* Luiz Fernando de Almeida Dias
+* Luciano Carvalho Couto Ferreira
+* Marcílio da Cruz França Júnior
+* Mariana Aparecida Rodrigues dos Santos 
 
 ## Orientador
 
-* Nome completo do professor
+* Marcos Andre Silveira Kutova
 
 # Documentação
 
