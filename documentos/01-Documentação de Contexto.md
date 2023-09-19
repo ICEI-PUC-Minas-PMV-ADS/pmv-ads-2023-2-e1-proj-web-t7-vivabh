@@ -2,7 +2,7 @@
 
 A cidade de BH tem diversos eventos, desde shows internacionais a palestras inspiradoras, feiras culturais e exposições. Atualmente existem sites que divulgam os eventos para o público, como o SouBH, Sympla, e AgendaBH, para citar três de um número maior de opções gratuitas e bem atualizadas. No entanto, há uma clara lacuna na comunicação desses eventos para o público. As informações muitas vezes se perdem nas plataformas que não apresentam de forma eficiente a localização dos eventos, sendo pouco interativo com o usuário, apresentando muitas vezes em listas ou galerias de eventos conforme figura 1 do site SouBH. E o público potencial muitas vezes não consegue visualizar os eventos que tem disponível próximo à ele.
 
-![Sou BH Landingpage](img/soubh.jpg "Site SOUBH")
+![Sou BH Landingpage](img/DOCUMENTO_CONTEXTO_FIGURA1_SITE_SOUBH.PNG) "Site SOUBH"
 
 Os eventos são considerados como um acontecimento o qual reúne um público em um espaço físico com um objetivo em comum (ALVES, 2012). Além disso os eventos são categorizados em Culturais, Corporativos, Educacionais, Esportivos e Sociais que são definidos da seguinte forma:
 
