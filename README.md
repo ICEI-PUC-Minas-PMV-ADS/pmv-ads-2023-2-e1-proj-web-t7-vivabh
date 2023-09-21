@@ -11,7 +11,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
 ## Integrantes
 
-* Igor Fonseca Amorim
+* Igor Fonseca 
 * João Pedro Menezes Matias da Silva
 * Luiz Fernando de Almeida Dias
 * Luciano Carvalho Couto Ferreira
