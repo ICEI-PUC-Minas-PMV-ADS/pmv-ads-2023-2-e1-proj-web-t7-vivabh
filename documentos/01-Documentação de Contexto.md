@@ -6,20 +6,16 @@ A cidade de BH tem diversos eventos, desde shows internacionais a palestras insp
 
 Os eventos são considerados como um acontecimento o qual reúne um público em um espaço físico com um objetivo em comum (ALVES, 2012). Além disso os eventos são categorizados em Culturais, Corporativos, Educacionais, Esportivos e Sociais que são definidos da seguinte forma:
 
-* Eventos Culturais - tem como objetivo proporcionar diversão e entretenimento ao público. Exemplo: festivais e shows musicais, exposições artísticas, festivais de gastronomia e festas.
-
-* Eventos corporativos - Costumam ser mais formais e geralmente são organizados por empresas ou instituições com objetivos variados, podendo visar o treinamento de colaboradores, e a criação de uma relação mais próxima com clientes, parceiros e novos consumidores ou usuários do produto ou serviço produzido pela empresa. Exemplos: feiras, conferências, reuniões e treinamentos.
-
-* Eventos educacionais - tem como objetivo o aprendizado e muitas vezes emite certificados. Tem como público alvo estudantes, pessoas que desejam uma especialização e profissionais. Exemplo: cursos, congressos, workshops, mesas redondas, palestras e seminários.
-
-* Eventos esportivos - tem como objetivo incentivar a prática de esportes e atividades físicas e podem ser voltados tanto para atletas amadores como profissionais. Exemplo: corridas, maratonas, campeonatos e jogos individuais.
-
-*Eventos sociais  - tem como objetivos a diversão e a confraternização entre os presentes, mas não possui caráter comercial e são destinados a um público específico. Exemplos: festas, casamentos, happy hours, aniversários, churrascos e festas de formatura
++Eventos Culturais - tem como objetivo proporcionar diversão e entretenimento ao público. Exemplo: festivais e shows musicais, exposições artísticas, festivais de gastronomia e festas.
++Eventos corporativos - Costumam ser mais formais e geralmente são organizados por empresas ou instituições com objetivos variados, podendo visar o treinamento de colaboradores, e a criação de uma relação mais próxima com clientes, parceiros e novos consumidores ou usuários do produto ou serviço produzido pela empresa. Exemplos: feiras, conferências, reuniões e treinamentos.
++Eventos educacionais - tem como objetivo o aprendizado e muitas vezes emite certificados. Tem como público alvo estudantes, pessoas que desejam uma especialização e profissionais. Exemplo: cursos, congressos, workshops, mesas redondas, palestras e seminários.
++Eventos esportivos - tem como objetivo incentivar a prática de esportes e atividades físicas e podem ser voltados tanto para atletas amadores como profissionais. Exemplo: corridas, maratonas, campeonatos e jogos individuais.
++Eventos sociais  - tem como objetivos a diversão e a confraternização entre os presentes, mas não possui caráter comercial e são destinados a um público específico. Exemplos: festas, casamentos, happy hours, aniversários, churrascos e festas de formatura
 
 Eventos possuem 3 fases:
-* Pré-evento;
-* Evento;
-* Pós-evento.
++Pré-evento;
++Evento;
++Pós-evento.
 
 ## Problema
 
