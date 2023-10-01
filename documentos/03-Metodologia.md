@@ -65,7 +65,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | [http://....   ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/tree/main)                         |
 | Documentos do projeto               | GitHub                             | [http://....    ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/tree/main/documentos)                        |
-| Projeto de Interface                | Figma                              | http://....                            |
+| Projeto de Interface                | Figma                              | [https://..](https://www.figma.com/file/ih4w85wfG1p5OvOeE8bgob/Prot%C3%B3tipo-Viva-BH?type=design&node-id=0%3A1&mode=design&t=GxaKib2EUYl4Kj2W-1)
 | Gerenciamento do Projeto            | GitHub Projects                    | http://....                            |
 | Hospedagem                          | GitHub Pages                       | http://....                            |
 
