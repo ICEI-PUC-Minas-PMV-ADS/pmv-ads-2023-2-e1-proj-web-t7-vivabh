@@ -1,33 +1,33 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/teYJD0R3)
-# Título do Projeto
+# VivaBH
 
-`CURSO`
+`Analise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Front-end`
 
-`SEMESTRE`
+`Primeiro semestre`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Igor Fonseca Amorim
+* João Pedro Menezes Matias da Silva
+* Luiz Fernando de Almeida Dias
+* Luciano Carvalho Couto Ferreira
+* Marcílio da Cruz França Júnior
+* Mariana Aparecida Rodrigues dos Santos 
 
 ## Orientador
 
-* Nome completo do professor
+* Marcos Andre Silveira Kutova
 
 # Documentação
 
 <ol>
 <li><a href="documentos/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
 <li><a href="documentos/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
-<li><a href="documentos/03-Metodologia.md"> Metodologia</a></li>
+<li><a href="documentos/03-Metodologia.md"> Metodologia </a></li>
 <li><a href="documentos/04-Projeto de Interface.md"> Projeto de Interface</a></li>
 <li><a href="documentos/05-Template padrão da Aplicação.md"> Template padrão da Aplicação</a></li>
 <li><a href="documentos/06-Programação de Funcionalidades.md"> Programação de Funcionalidades</a></li>
