@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #7209b7;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #f5f5f5;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-primary);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 12.5%;
+}
+
+#app {
+  min-height: calc(100vh - 13vh - 13vh + 1.3rem);
+}
