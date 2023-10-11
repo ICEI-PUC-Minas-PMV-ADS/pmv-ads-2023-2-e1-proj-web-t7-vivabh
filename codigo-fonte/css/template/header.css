@@ -1,0 +1,80 @@
+#main-header {
+  min-height: 13vh;
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  min-height: min-content;
+  justify-content: space-between;
+}
+#main-header .search-container {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  position: relative;
+  padding: 5px;
+  flex: 0.75;
+  border-radius: 13.301px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+  height: 53px;
+}
+
+#main-header .search-container .search-input {
+  border-radius: 13.301px;
+  padding: 0 16px 0 56px;
+  flex: 1;
+  border: none;
+  height: 53px;
+  outline: none;
+  color: #39425d;
+  font-size: 18.622px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#main-header .search-container .search-icon {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  padding: 5px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+}
+
+#main-header nav {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+#main-header nav a {
+  position: relative;
+  color: #4361ee;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  transition: all 0.3s ease-in-out;
+}
+
+#main-header nav a:hover {
+  color: #3c47e9;
+}
+
+#main-header nav a.active {
+  color: #3c47e9;
+}
+
+#main-header nav a:last-child {
+  border: #4361ee solid 2px;
+  border-radius: 99999px;
+  padding: 10px 20px;
+  color: #4361ee;
+}
