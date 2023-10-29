@@ -33,7 +33,7 @@ Correção da Etapa 1
 
 Definição de Scrum Master e Product Owner
 	Ficou alinhado que o Luciano irá criar um enquete para definição de Scrum Master e Product Owner de forma democrática no grupo do Whatsapp;
-	Foi realizada a votação e ficou concluído que o Luciano é o Product Owner e Igor é o Scrum Master. Concluido 15/09.
+	Foi realizada a votação e ficou concluído que o Luciano é o Product Owner e Igor é o Scrum Master. Iniciado 15/09| Concluido 17/09.
 
 Correção Userflow
 	Ficou definido que o João irá ajustar o Workflow com as orientações do professor e irá compartilhar no Whatsapp para ouvir a opção dos demais integrantes da equipe;
