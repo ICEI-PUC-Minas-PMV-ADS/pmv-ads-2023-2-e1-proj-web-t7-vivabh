@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./../css/global.css" rel="stylesheet" />
+    <link href="./../css/template/header.css" rel="stylesheet" />
+    <link href="./../css/template/footer.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Viva BH</title>
+  </head>
+  <body>
+    <header class="container" id="main-header">
+      <a href="/" onclick="route()">
+        <img src="./../assets/logo.svg" alt="Viva BH" />
+      </a>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Pesquisar..." />
+        <div class="search-icon">&#128269;</div>
+      </div>
+      <nav>
+        <a href="/register" onclick="route()">Quero Divulgar</a>
+        <a href="/login" onclick="route()">Login</a>
+      </nav>
+    </header>
+    <main class="container" id="app">
+      <div class="center-container">
+        <div id="center-div">
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1D-MY8uQLaLgsej8lbpDinyKwcdRaiT0&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+        </div>
+      </div>
+    </main>
+    <footer class="container">
+      <div class="footer-container">
+        <div class="description">
+          <h3>VivaBH</h3>
+          <p>A melhor plataforma de eventos de BH</p>
+        </div>
+        <p>
+          Made with <span class="heart">♥</span> by
+          <a
+            href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/"
+            target="_blank"
+            >Viva BH</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
