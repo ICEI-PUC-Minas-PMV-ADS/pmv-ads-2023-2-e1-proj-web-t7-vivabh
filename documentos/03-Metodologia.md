@@ -25,7 +25,7 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 
 ### Processo
 
-
+Sprint Etapa 03
 Correção da Etapa 1
 	Ficou correto que Marcílio irá corrigir o documento e colar a correção no Github da equipe;
 	Marcílio realizou a correção do documento e anexou a correção no Github.
