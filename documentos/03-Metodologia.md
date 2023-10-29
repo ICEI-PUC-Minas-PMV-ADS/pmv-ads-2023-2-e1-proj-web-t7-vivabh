@@ -41,7 +41,7 @@ Correção Userflow
 
 Criação Repositório GitHub
 	Ficou definido que o João irá "alimentar" o repositório da equipe com as informações atualizadas;
-	Está sendo realizado a inclusão das informações no repositório.
+	Está sendo realizado a inclusão das informações no repositório. Iniciado 14/09| Concluido 14/09.
 
 Criação do Wireframe
 	Ficou alinhado que o Luciano irá criar o Wireframe da aplicação até a próxima aula, sugestões abertas para quem quiser participar da criação;
