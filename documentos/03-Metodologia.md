@@ -16,7 +16,7 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 - Scrum Master: Igor Fonseca, principal responsável pela gestão do projeto.
 - Product Owner: Luciano Carvalho, representante dos interesses de todos os envolvidos (Stakeholders), define as funcionalidades do produto e prioriza os itens de Product Backlog.
 - Equipe de Desenvolvimento: Luiz Fernando, Mariana Rodrigues, João Pedro, Marcílio Cruz, Luciano Carvalho e Igor Fonseca, pois todos os membros deverão implementar uma tela/funcionalidade.
-- Equipe de Design: Mariana Rodrigues, João Pedro e Luciano Carvalho.
+- Equipe de Design: Mariana Rodrigues, João Pedro e Luciano Carvalho
 
 > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu 
