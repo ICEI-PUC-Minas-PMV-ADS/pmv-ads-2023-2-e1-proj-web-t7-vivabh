@@ -29,7 +29,7 @@ Sprint Etapa 02 | Periodo 04/09 á 01/10.
 
 Correção da Etapa 1 
 	Ficou correto que Marcílio irá corrigir o documento e colar a correção no Github da equipe;
-	Marcílio realizou a correção do documento e anexou a correção no Github.
+	Marcílio realizou a correção do documento e anexou a correção no Github. Iniciado 14/09| Concluído em 14/09.
 
 Definição de Scrum Master e Product Owner
 	Ficou alinhado que o Luciano irá criar um enquete para definição de Scrum Master e Product Owner de forma democrática no grupo do Whatsapp;
