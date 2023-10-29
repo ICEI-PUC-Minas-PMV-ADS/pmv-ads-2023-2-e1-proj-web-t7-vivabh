@@ -46,7 +46,7 @@ Criação Repositório GitHub
 Criação do Wireframe
 	Ficou alinhado que o Luciano irá criar o Wireframe da aplicação até a próxima aula, sugestões abertas para quem quiser participar da criação;
 	Foi realizado a criação Wireframe, pelo João, Luciano e Mariana. Iniciado 21/09| Concluido 30/09.
-        https://trello.com/b/UrWxEvj4
+        Kanban | Trello: https://trello.com/b/UrWxEvj4
 
 
 > **Links Úteis**:
