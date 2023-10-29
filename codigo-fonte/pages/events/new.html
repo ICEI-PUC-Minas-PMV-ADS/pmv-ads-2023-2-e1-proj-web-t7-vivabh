@@ -1,0 +1,52 @@
+<div id="new-event-container">
+	<h1>Criar evento</h1>
+	<form action="POST" enctype="multipart/form-data" id="new-event-form">
+		<div class="fields">
+			<div class="input-container input-full">
+				<label for="name">Nome do evento</label>
+				<input name="name" type="text" placeholder="Evento mais legal de BH" />
+			</div>
+			<div class="input-container input-full">
+				<label for="address">Endereço</label>
+				<input name="address" type="text" placeholder="Rua dos Bobos, 0" />
+			</div>
+			<div class="input-container input-half">
+				<label for="date">Data</label>
+				<input name="date" type="date" placeholder="27-05-1998" />
+			</div>
+			<div class="input-container input-half">
+				<label for="time">Horário</label>
+				<input name="time" type="time" placeholder="00:00" />
+			</div>
+			<div class="input-container input-half">
+				<label for="classification">Classificação</label>
+				<select name="classification" id="classification"></select>
+			</div>
+			<div class="input-container input-half">
+				<label for="quantity">Quantidade de ingressos</label>
+				<input name="quantity" type="number" placeholder="2" />
+			</div>
+			<div class="input-container input-full">
+				<label for="category">Tipo de evento</label>
+				<select name="category" id="category"></select>
+			</div>
+
+			<div class="input-container input-full">
+				<label for="description">Descrição</label>
+				<textarea name="description" id="description"></textarea>
+			</div>
+			<input class="desktop" type="submit" value="Criar" />
+		</div>
+
+		<div class="image-container">
+			<label for="image">Selecionar imagem:</label>
+			<input type="file" id="image" name="image" accept="image/*" />
+			<img
+				id="image-preview"
+				src="../../assets/placeholder.png"
+				alt="Placeholder Image"
+			/>
+		</div>
+		<input class="mobile" type="submit" value="Criar" />
+	</form>
+</div>
