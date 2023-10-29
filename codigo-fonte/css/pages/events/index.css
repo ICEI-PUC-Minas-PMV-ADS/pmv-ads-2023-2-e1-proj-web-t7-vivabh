@@ -1,0 +1,104 @@
+@import './new.css';
+
+#events-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#events-container .heading {
+	display: flex;
+	justify-content: space-between;
+	margin: 2rem 0;
+}
+
+#events-container .heading .filters {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+#events-container .heading .filters .filter {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	position: relative;
+}
+
+#events-container .heading .filters .filter select {
+	border-radius: 50px;
+	border: 2px solid #3a0ca3;
+	height: 55px;
+	min-width: 170.705px;
+	background-color: transparent;
+	padding: 0 1rem;
+	transition: all 0.3s ease-in-out;
+	appearance: none;
+	cursor: pointer;
+	color: #3a0da3;
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+#events-container .heading .filters .filter select::-ms-expand {
+	display: none;
+}
+#events-container .heading .filters .filter::after {
+	content: '';
+	background-image: url('../../../assets/arrowDown.svg');
+	background-repeat: no-repeat;
+	position: absolute;
+	display: block;
+	top: 60%;
+	right: 24px;
+	transform: translateY(-50%);
+	width: 1rem;
+	height: 1rem;
+	pointer-events: none;
+}
+#events-container .heading .filters .filter select:focus {
+	border: 2px solid #3a0ca3;
+	outline: none;
+}
+
+#events-container .events {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+}
+
+@media (max-width: 1029px) {
+	#events-container .events {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#events-container .heading .filters .filter select {
+		min-width: 150px;
+		font-size: 12px;
+	}
+
+	#events-container .heading .filters .filter::after {
+		right: 22px;
+		width: 2rem;
+		height: 1.2rem;
+	}
+}
+
+@media (max-width: 767px) {
+	#events-container .events {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	#events-container .heading .filters .filter select {
+		width: 100%;
+	}
+
+	#events-container .heading {
+		flex-direction: column;
+		gap: 1rem;
+	}
+}
