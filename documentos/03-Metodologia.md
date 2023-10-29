@@ -25,12 +25,28 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 
 ### Processo
 
-[Adicione informações sobre detalhes da implementação do Scrum seguido pela equipe. A equipe poderá fazer uso de ferramentas on-line (GitHub Project ou Trello) para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução. O quadro Kanban deverá apresentar a estrutura abaixo. Inserir despois das informações uma imagem do Kanban do projeto.]
-- Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
-- To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
-- Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
-- Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
-- https://trello.com/b/UrWxEvj4
+
+Correção da Etapa 1
+	Ficou correto que Marcílio irá corrigir o documento e colar a correção no Github da equipe;
+	Marcílio realizou a correção do documento e anexou a correção no Github.
+
+Definição de Scrum Master e Product Owner
+	Ficou alinhado que o Luciano irá criar um enquete para definição de Scrum Master e Product Owner de forma democrática no grupo do Whatsapp;
+	Foi realizada a votação e ficou concluído que o Luciano é o Product Owner e Igor é o Scrum Master
+
+Correção Userflow
+	Ficou definido que o João irá ajustar o Workflow com as orientações do professor e irá compartilhar no Whatsapp para ouvir a opção dos demais integrantes da equipe;
+	Foi concluído o ajuste no Workflow.
+
+Criação Repositório GitHub
+	Ficou definido que o João irá "alimentar" o repositório da equipe com as informações atualizadas;
+	Está sendo realizado a inclusão das informações no repositório.
+
+Criação do Wireframe
+	Ficou alinhado que o Luciano irá criar o Wireframe da aplicação até a próxima aula, sugestões abertas para quem quiser participar da criação;
+	Foi realizado a criação Wireframe, pelo João, Luciano e Mariana.
+https://trello.com/b/UrWxEvj4
+
 
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
