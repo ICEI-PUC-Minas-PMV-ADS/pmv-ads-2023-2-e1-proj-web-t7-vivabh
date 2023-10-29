@@ -37,7 +37,7 @@ Definição de Scrum Master e Product Owner
 
 Correção Userflow
 	Ficou definido que o João irá ajustar o Workflow com as orientações do professor e irá compartilhar no Whatsapp para ouvir a opção dos demais integrantes da equipe;
-	Foi concluído o ajuste no Workflow. Iniciado: 10/10| Concluido 13/10.
+	Foi concluído o ajuste no Workflow. Iniciado: 14/09| Concluido 14/09.
 
 Criação Repositório GitHub
 	Ficou definido que o João irá "alimentar" o repositório da equipe com as informações atualizadas;
