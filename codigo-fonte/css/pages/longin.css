@@ -1,0 +1,102 @@
+#formlogin {
+    display: flex;
+    border-radius: 50px;
+    background-color: white;
+    max-width: 1120px;
+    width: 100%;
+    height: 776px;
+
+}
+
+#formlogin img {
+    max-width: 283.875px;
+    width: 100%;
+    height:auto;
+}
+
+#formlogin .man-info{
+ display: flex ;
+flex-direction: column ;
+gap: 125px;
+margin-top: 50px;
+
+}
+#formlogin h1{
+
+    font-family: Arial;
+    color: white;
+    margin-bottom: 100px;
+
+}
+
+#formlogin h2{ 
+    font-family: Arial;
+    color: black;
+
+}
+
+#formlogin form {
+background-image: linear-gradient(
+#a747e7d0 40%,
+#e64f90
+    );
+    border-top-right-radius: 50px;
+    border-bottom-right-radius:  50px;
+    padding: 5%;
+    max-width: 1000px;
+    width: 70%;
+    text-align: center;
+}
+
+
+#formlogin .login-container{
+    padding: 50px;
+    max-width: 1000px;
+    width: 30%;
+    text-align: center;
+    height: 100%;
+    
+
+}
+
+#formlogin input {
+    width:50%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+    border-radius: 20px;
+}
+
+#formlogin.Esqueceu-senha{
+    color: #FFF;
+    text-decoration: none;
+
+}
+
+#formlogin .criar-conta {
+    padding: 20px 50px;
+    width: 228.651px;
+    height: 62px;
+    flex-shrink: 0;
+    border-radius: 65px;
+    background: #7209B7;
+color: white;
+text-decoration: none;
+
+}
+
+#formlogin button {
+    cursor: pointer;
+    width: 220.9px;
+    height: 65px;
+    flex-shrink: 0;
+    border-radius: 65px;
+    background: #4361EE;
+    color: white;
+    border: none;
+   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
