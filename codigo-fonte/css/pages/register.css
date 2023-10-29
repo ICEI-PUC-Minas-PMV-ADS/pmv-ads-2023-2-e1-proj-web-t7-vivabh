@@ -1,0 +1,44 @@
+
+#formRegister {
+    background-color: white;
+    border-color: black;
+    padding: 60px;
+    border-radius: 50px;
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+#formRegister h1 {
+    text-align: center;
+}
+
+#formRegister input {
+    width:50%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+    border-radius: 20px;
+}
+
+
+#formRegister button {
+    width: 100px;
+    padding: 15px;
+    margin-bottom: center;
+    background-color: #8417c4;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#formRegister .Conta{
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
