@@ -63,6 +63,12 @@ Sprint Etapa 02 - Projeto da solução | Periodo 04/09 á 01/10.
 Obs: Para este Sprint foi organizado as atividades no Trello no link abaixo, já que a equipe ainda não havia criado repositório no GitHub:
         Kanban | Trello: https://trello.com/b/UrWxEvj4
 
+ <figure> 
+  <img src="img/Captura de tela 2023-10-29 212929.png"
+    <figcaption>Figura 2 - Trello, relações de atividaes organizadas para o Sprint 1 e 2</figcaption>
+</figure> 
+  
+
 Sprint Etapa 03 - Desenvolvimento da solução - Parte 1 | Periodo 02/10/2023 à 29/10/2023.
 - Implementar o login - Responsáveis: Igor; 
 - Revisão da Metodologia e Criar "Issues" - Responsáveis: Marcílio e João;
