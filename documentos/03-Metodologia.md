@@ -27,25 +27,26 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 
 Sprint Etapa 02 - Projeto da solução | Periodo 04/09 á 01/10.
 
--Correção da Etapa 1 :
+- Correção da Etapa 1 :
 	Ficou correto que Marcílio irá corrigir o documento e colar a correção no Github da equipe;
 	Marcílio realizou a correção do documento e anexou a correção no Github. Iniciado 14/09| Concluído em 14/09.
 
--Definição de Scrum Master e Product Owner
+- Definição de Scrum Master e Product Owner:
 	Ficou alinhado que o Luciano irá criar um enquete para definição de Scrum Master e Product Owner de forma democrática no grupo do Whatsapp;
 	Foi realizada a votação e ficou concluído que o Luciano é o Product Owner e Igor é o Scrum Master. Iniciado 15/09| Concluido 17/09.
 
--Correção Userflow
+- Correção Userflow:
 	Ficou definido que o João irá ajustar o Workflow com as orientações do professor e irá compartilhar no Whatsapp para ouvir a opção dos demais integrantes da equipe;
 	Foi concluído o ajuste no Workflow. Iniciado: 14/09| Concluido 14/09.
 
--Criação Repositório GitHub
+- Criação Repositório GitHub:
 	Ficou definido que o João irá "alimentar" o repositório da equipe com as informações atualizadas;
 	Está sendo realizado a inclusão das informações no repositório. Iniciado 14/09| Concluido 14/09.
 
--Criação do Wireframe
+- Criação do Wireframe:
 	Ficou alinhado que o Luciano irá criar o Wireframe da aplicação até a próxima aula, sugestões abertas para quem quiser participar da criação;
 	Foi realizado a criação Wireframe, pelo João, Luciano e Mariana. Iniciado 21/09| Concluido 30/09.
+Obs: Para este Sprint foi organizado as atividades no Trello no link abaixo, já que a equipe ainda não havia criado repositório no GitHub:
         Kanban | Trello: https://trello.com/b/UrWxEvj4
 
 
