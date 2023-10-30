@@ -218,3 +218,40 @@
 		width: 85%;
 	}
 }
+
+.menuhorizontal{
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: 30px;
+	}
+
+.menuhorizontal ul{
+	list-style: none;
+	float: center;
+	}
+.menuhorizontal li{
+	display: inline;
+	float: left;
+	padding:0px;
+	margin: 0;
+	width: 80px;
+	border-left: #666666 thin solid;
+	}
+.menuhorizontal a{
+	display: block;
+	text-decoration: none;
+	padding: 6px;
+	background-color: #CCCCCC;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	}
+.menuhorizontal :hover{
+	background-color: #EEEEEE;
+	text-decoration: none;
+	color: #FFFFFF;
+	}
+
+.menuhorizontal li.btnesquerdo{
+	border: 10px;}
