@@ -25,7 +25,7 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 
 ### Processo
 
-Sprint Etapa 01 - Análise do problema e especificação de requisitos | Periodo 01/08/2023 à 03/09/2023.
+## Sprint Etapa 01 - Análise do problema e especificação de requisitos | Periodo 01/08/2023 à 03/09/2023.
 
 - Apresentação da Proposta da Solução (em slides, no formato PDF)- Responsável: Luciano e Mariana
   
@@ -38,7 +38,7 @@ Sprint Etapa 01 - Análise do problema e especificação de requisitos | Periodo
 Obs: Para este Sprint foi organizado as atividades no Trello no link abaixo, já que a equipe ainda não havia criado repositório no GitHub:
         Kanban | Trello: https://trello.com/b/UrWxEvj4
   
-Sprint Etapa 02 - Projeto da solução | Periodo 04/09 á 01/10.
+## Sprint Etapa 02 - Projeto da solução | Periodo 04/09 á 01/10.
 
 - Correção da Etapa 1 :
 	Ficou correto que Marcílio irá corrigir o documento e colar a correção no Github da equipe;
@@ -65,11 +65,13 @@ Obs: Para este Sprint foi organizado as atividades no Trello no link abaixo, já
 
  <figure> 
   <img src="img/Captura de tela 2023-10-29 212929.png"
-    <figcaption>Figura 2 - Trello, relações de atividaes organizadas para o Sprint 1 e 2</figcaption>
+    <figcaption>Figura 1 - Trello, relações de atividaes organizadas para o Sprint 1 e 2</figcaption>
 </figure> 
   
 
-Sprint Etapa 03 - Desenvolvimento da solução - Parte 1 | Periodo 02/10/2023 à 29/10/2023.
+
+
+## Sprint Etapa 03 - Desenvolvimento da solução - Parte 1 | Periodo 02/10/2023 à 29/10/2023.
 
 - Implementar o login - Responsáveis: Igor; 
 - Revisão da Metodologia e Criar "Issues" - Responsáveis: Marcílio e João;
@@ -108,7 +110,7 @@ Sprint Etapa 03 - Desenvolvimento da solução - Parte 1 | Periodo 02/10/2023 à
 
 <figure> 
   <img src="https://user-images.githubusercontent.com/100447878/164068979-9eed46e1-9b44-461e-ab88-c2388e6767a1.png"
-    <figcaption>Figura 3 - Tela do esquema de cores e categorias</figcaption>
+    <figcaption>Figura 2 - Tela do esquema de cores e categorias</figcaption>
 </figure> 
   
 ### Ferramentas
