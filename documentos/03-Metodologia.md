@@ -46,6 +46,7 @@ Sprint Etapa 02 - Projeto da solução | Periodo 04/09 á 01/10.
 - Criação do Wireframe:
 	Ficou alinhado que o Luciano irá criar o Wireframe da aplicação até a próxima aula, sugestões abertas para quem quiser participar da criação;
 	Foi realizado a criação Wireframe, pelo João, Luciano e Mariana. Iniciado 21/09| Concluido 30/09.
+
 Obs: Para este Sprint foi organizado as atividades no Trello no link abaixo, já que a equipe ainda não havia criado repositório no GitHub:
         Kanban | Trello: https://trello.com/b/UrWxEvj4
 
