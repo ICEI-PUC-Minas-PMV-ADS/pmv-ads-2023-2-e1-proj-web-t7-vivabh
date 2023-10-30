@@ -70,6 +70,7 @@ Obs: Para este Sprint foi organizado as atividades no Trello no link abaixo, já
   
 
 Sprint Etapa 03 - Desenvolvimento da solução - Parte 1 | Periodo 02/10/2023 à 29/10/2023.
+
 - Implementar o login - Responsáveis: Igor; 
 - Revisão da Metodologia e Criar "Issues" - Responsáveis: Marcílio e João;
 - Implementar Filtro de Busca Usuário (Participantes de Eventos) - Responsáveis: João;
