@@ -25,6 +25,19 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 
 ### Processo
 
+Sprint Etapa 01 - Análise do problema e especificação de requisitos | Periodo 01/08/2023 à 03/09/2023.
+
+- Apresentação da Proposta da Solução (em slides, no formato PDF)- Responsável: Luciano e Mariana
+  
+- Especificação do Projeto - Responsáveis: Luiz e Igor
+  
+- Fazer parte 1 - Documentação de Contexto - Marcílio e João
+  
+- Revisão parte 1 - Documento de Contexto - Responsáveis: Luciano e Mariana
+
+Obs: Para este Sprint foi organizado as atividades no Trello no link abaixo, já que a equipe ainda não havia criado repositório no GitHub:
+        Kanban | Trello: https://trello.com/b/UrWxEvj4
+  
 Sprint Etapa 02 - Projeto da solução | Periodo 04/09 á 01/10.
 
 - Correção da Etapa 1 :
@@ -49,6 +62,22 @@ Sprint Etapa 02 - Projeto da solução | Periodo 04/09 á 01/10.
 
 Obs: Para este Sprint foi organizado as atividades no Trello no link abaixo, já que a equipe ainda não havia criado repositório no GitHub:
         Kanban | Trello: https://trello.com/b/UrWxEvj4
+
+Sprint Etapa 03 - Desenvolvimento da solução - Parte 1 | Periodo 02/10/2023 à 29/10/2023.
+- Implementar o login - Responsáveis: Igor; 
+- Revisão da Metodologia e Criar "Issues" - Responsáveis: Marcílio e João;
+- Implementar Filtro de Busca Usuário (Participantes de Eventos) - Responsáveis: João;
+- Implementar Mapa com Localização dos Eventos - Responsáveis: Luiz;
+- Atualizar Referências Bibliográficas - Responsáveis: TODOS;
+- HTML CSS do Card de eventos - Responsáveis: Marcílio;
+- HTML CSS Navegador de categorias - Responsáveis: Marcílio;
+- Desenvolver Template padrão da aplicação - Responsáveis: João;
+- Incluir "homepage" no fluxo do produtor - Responsáveis João:
+- Atualizar documentação (Metodologia) - Responsáveis: Mariana e Marcílio;
+- Atualizar documentação (Contexto) - Responsáveis: Marcílio e João;
+- Atualizar documentação (Especificação de Projeto) - Responsáveis: João e Igor;
+- Atualizar documentação (Projeto de Interface) - Responsáveis: João e Luciano;
+
 
 
 > **Links Úteis**:
