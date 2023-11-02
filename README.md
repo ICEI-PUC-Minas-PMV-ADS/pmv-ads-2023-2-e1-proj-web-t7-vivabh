@@ -38,8 +38,8 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
-
+* [VivaBH](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t7-vivabh/codigo-fonte/)
+  
 # Código-Fonte
 
 * <a href="codigo-fonte/README.md">Código Fonte</a>
