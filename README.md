@@ -38,7 +38,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
 # Hospedagem
 
-* [VivaBH](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t7-vivabh/codigo-fonte/)
+* [VivaBH](https://vivabhpuc.netlify.app/)
   
 # Código-Fonte
 
