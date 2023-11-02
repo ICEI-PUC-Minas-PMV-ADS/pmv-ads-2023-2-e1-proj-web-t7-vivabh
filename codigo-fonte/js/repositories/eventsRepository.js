@@ -66,15 +66,7 @@ export class EventsRepository {
 	}
 
 	getCategories() {
-		return [
-			'Cursos e Treinamentos',
-			'Encontros',
-			'Esportes',
-			'Festas',
-			'Música',
-			'Teatro',
-			'Workshops',
-		];
+		return ['Shows', 'Festas', 'Esporte', 'Cultural'];
 	}
 
 	getClassifications() {

@@ -14,9 +14,8 @@ const routes = {
 	'/': '/pages/home.html',
 	'/login': '/pages/login.html',
 	'/register': '/pages/register.html',
-	'/events/new': '/pages/events/new.html',
-	'/events': '/pages/events/index.html',
-	'/categories': '/pages/categorias.html',
+	'/eventos/novo': '/pages/events/new.html',
+	'/eventos': '/pages/events/index.html',
 };
 
 export const handleLocation = async () => {
