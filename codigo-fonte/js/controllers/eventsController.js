@@ -73,6 +73,7 @@ export class EventsController {
 		const classification = document.querySelector(
 			'select[name="classification"]'
 		).value;
+
 		const id = Math.floor(Math.random() * 1000000);
 
 		const newEvent = {
@@ -91,6 +92,7 @@ export class EventsController {
 		const result = await this.createEvent(newEvent);
 
 		if (result) {
+			localStorage.removeItem('preview-image');
 			window.location.href = '/events';
 			return;
 		}

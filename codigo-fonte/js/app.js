@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (window.location.pathname === '/events/new') {
 		setTimeout(() => {
 			eventsController.initNewEventForm();
-		}, 100);
+		}, 2000);
 	}
 	uiController.initDrawer();
 });

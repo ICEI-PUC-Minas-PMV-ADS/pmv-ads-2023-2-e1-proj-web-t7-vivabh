@@ -48,3 +48,7 @@ codigo-fonte/*.sln
 codigo-fonte/*.sw?
 
 
+
+# Local Netlify folder
+.netlify
+

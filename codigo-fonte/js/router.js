@@ -16,6 +16,7 @@ const routes = {
 	'/register': '/pages/register.html',
 	'/events/new': '/pages/events/new.html',
 	'/events': '/pages/events/index.html',
+	'/categories': '/pages/categorias.html',
 };
 
 export const handleLocation = async () => {
