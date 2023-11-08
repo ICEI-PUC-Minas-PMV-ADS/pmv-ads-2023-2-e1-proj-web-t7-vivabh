@@ -50,5 +50,5 @@ codigo-fonte/*.sw?
 
 
 # Local Netlify folder
-.netlify
+codigo-fonte/.vercel
 
