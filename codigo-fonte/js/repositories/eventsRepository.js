@@ -1,5 +1,4 @@
-import { Event } from '../model/Event.js';
-import { v4 as uuidv4 } from 'uuid';
+import { Event } from '../model/Event';
 
 export class EventsRepository {
 	constructor() {
@@ -11,10 +10,8 @@ export class EventsRepository {
 	}
 
 	add(event) {
-		const id = uuidv4();
-
 		const newEvent = new Event(
-			id,
+			event.id,
 			event.name,
 			event.description,
 			event.date,
@@ -69,10 +66,9 @@ export class EventsRepository {
 		this.saveEvents();
 	}
 
-	getCategories() {
-		return ['Shows', 'Festas', 'Esporte', 'Cultural'];
+	getByCategory(categoryName) {
+		return this.events.filter((event) => event.category.name === categoryName);
 	}
-
 	getClassifications() {
 		return ['Livre', '10 anos', '12 anos', '14 anos', '16 anos', '18 anos'];
 	}

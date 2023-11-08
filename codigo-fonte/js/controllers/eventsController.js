@@ -12,6 +12,10 @@ export class EventsController {
 		return this.eventsRepository.getAll();
 	}
 
+	async getByCategory(category) {
+		return this.eventsRepository.getByCategory(category);
+	}
+
 	async getEvent(id) {
 		return this.eventsRepository.get(id);
 	}
@@ -139,6 +143,79 @@ export class EventsController {
 
 			imageInput.addEventListener('change', () => {
 				this.previewImage();
+			});
+		});
+	}
+
+	async populateEventsSearchContainer(filteredEvents = null) {
+		retryQuerySelector('#eventsSearchContainer', async (element) => {
+			const events = filteredEvents || (await this.getEvents());
+			element.innerHTML = '';
+			const eventsHtml = events.map((event) => {
+				return `
+					<div class='event'>
+
+						<div class='image-container'>
+
+							<img src='${event.image}' alt='${event.name}' />
+
+						</div>
+
+						<div class='info'>
+
+							<h2>nome ${event.name}</h2>
+
+							<p>endereco ${event.address}</p>
+
+							<p>data ${event.date}</p>
+
+							<p>hora ${event.time}</p>
+
+							<p>classificacao ${event.classification}</p>
+
+							<p>quantidade ${event.quantity}</p>
+
+							<p>categoria ${event.category.name}</p>
+
+							<p class='description'>descricao ${event.description}</p>
+
+						</div>
+
+					</div>
+
+
+					`;
+			});
+
+			element.innerHTML += eventsHtml.join('');
+		});
+	}
+
+	async getFilteredEvents(options) {
+		if (!options) return;
+		let events = [];
+
+		if (options.category) {
+			events = (await this.getByCategory(options.category)) || [];
+		}
+
+		if (options.classification) {
+			events = events.filter(
+				(event) => event.classification === options.classification
+			);
+		}
+
+		return events;
+	}
+
+	handleFilterChange() {
+		retryQuerySelector('#filterCategory', (element) => {
+			element.addEventListener('change', async () => {
+				const category = element.value;
+
+				let events = await this.getFilteredEvents({ category });
+
+				this.populateEventsSearchContainer(events);
 			});
 		});
 	}

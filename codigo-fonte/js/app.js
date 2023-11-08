@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (IsEventsPage()) {
 		uiController.populateFilterCategoriesSelect();
+		eventsController.handleFilterChange();
+		eventsController.populateEventsSearchContainer();
 	}
 
 	if (IsHomePage()) {
