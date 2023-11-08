@@ -67,10 +67,43 @@
 #events-container .events {
 	display: grid;
 	width: 100%;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 33%);
 	gap: 1rem;
 }
 
+#events-container .events .event {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	overflow: hidden;
+}
+
+#events-container .events .event img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+#events-container .events .event .info {
+	width: 100%;
+}
+
+#events-container .events .event .description {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#events-container .events .event:hover {
+	transform: scale(1.05);
+}
 @media (max-width: 1029px) {
 	#events-container .events {
 		grid-template-columns: repeat(2, 1fr);
