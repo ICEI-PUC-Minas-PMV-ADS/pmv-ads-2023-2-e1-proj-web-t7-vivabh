@@ -32,9 +32,10 @@ class UIController {
 			const navItems = categories
 				.map(
 					(category) => `
-			<li>
+			<li class='category'>
 				<a href="/eventos?categoria=${category.name}" onclick="route()">
 				 <img src="${category.icon}" alt="${category.name}" />
+				<h3>${category.name}</h3>
 				</a>
 			</li>
 		`

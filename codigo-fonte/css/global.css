@@ -46,23 +46,23 @@ button {
 }
 
 button {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .center-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
 }
 .center-div {
-  width: 200px;
+	width: 200px;
 }
 
 .center-div {
-  width: 200px; 
-  margin-left: auto;
-  margin-right: auto;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 h1,
