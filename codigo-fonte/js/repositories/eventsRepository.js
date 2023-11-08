@@ -1,4 +1,6 @@
 import { Event } from '../model/Event.js';
+import { v4 as uuidv4 } from 'uuid';
+
 export class EventsRepository {
 	constructor() {
 		this.events = JSON.parse(localStorage.getItem('events')) || [];
@@ -9,8 +11,10 @@ export class EventsRepository {
 	}
 
 	add(event) {
+		const id = uuidv4();
+
 		const newEvent = new Event(
-			event.id,
+			id,
 			event.name,
 			event.description,
 			event.date,
@@ -73,3 +77,7 @@ export class EventsRepository {
 		return ['Livre', '10 anos', '12 anos', '14 anos', '16 anos', '18 anos'];
 	}
 }
+
+const eventsRepository = new EventsRepository();
+
+export { eventsRepository };

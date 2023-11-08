@@ -1,8 +1,11 @@
-import { EventsRepository } from '../repositories/eventsRepository.js';
+import { retryQuerySelector } from '../helpers.js';
+import { categoryRepository } from '../repositories/categoriesRepository.js';
+import { eventsRepository } from '../repositories/eventsRepository.js';
 
 export class EventsController {
 	constructor() {
-		this.eventsRepository = new EventsRepository();
+		this.eventsRepository = eventsRepository;
+		this.categoriesRepository = categoryRepository;
 	}
 
 	async getEvents() {
@@ -14,7 +17,12 @@ export class EventsController {
 	}
 
 	async createEvent(event) {
-		return this.eventsRepository.add(event);
+		const category = this.categoriesRepository.getByName(event.category);
+
+		return this.eventsRepository.add({
+			...event,
+			category,
+		});
 	}
 
 	async updateEvent(event) {
@@ -28,7 +36,8 @@ export class EventsController {
 	}
 
 	async getCategories() {
-		return this.eventsRepository.getCategories();
+		const categories = this.categoriesRepository.getAll();
+		return categories.map((category) => category.name);
 	}
 
 	async getClassifications() {
@@ -74,10 +83,7 @@ export class EventsController {
 			'select[name="classification"]'
 		).value;
 
-		const id = Math.floor(Math.random() * 1000000);
-
 		const newEvent = {
-			id,
 			name,
 			description,
 			date,
@@ -93,7 +99,7 @@ export class EventsController {
 
 		if (result) {
 			localStorage.removeItem('preview-image');
-			window.location.href = '/events';
+			window.location.href = '/eventos';
 			return;
 		}
 
@@ -118,22 +124,26 @@ export class EventsController {
 		select.innerHTML += options.join('');
 	}
 
-	initNewEventForm() {
-		const form = document.getElementById('new-event-form');
+	async initNewEventForm() {
+		retryQuerySelector('#new-event-form', async (element) => {
+			element.addEventListener('submit', async (event) => {
+				await this.handleFormSubmission(event, element);
+			});
 
-		form.addEventListener('submit', (event) => {
-			this.handleFormSubmission(event, form);
-		});
+			this.createClassificationOptions();
+			await this.createCategoryOptions();
 
-		this.createClassificationOptions();
-		this.createCategoryOptions();
+			const imageInput = document.querySelector(
+				'#new-event-form .image-container input[type=file]#image'
+			);
 
-		const imageInput = document.querySelector(
-			'#new-event-form .image-container input[type=file]#image'
-		);
-
-		imageInput.addEventListener('change', () => {
-			this.previewImage();
+			imageInput.addEventListener('change', () => {
+				this.previewImage();
+			});
 		});
 	}
 }
+
+const eventsController = new EventsController();
+
+export { eventsController };

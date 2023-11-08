@@ -1,3 +1,5 @@
+import { Category } from './Category';
+
 /**
  * Represents an event with various properties.
  *
@@ -15,7 +17,7 @@ export class Event {
 	 * @param {string} time - The time of the event.
 	 * @param {string} address - The address of the event.
 	 * @param {string} image - The URL of the event image.
-	 * @param {string} category - The category of the event.
+	 * @param {Category} category - The category of the event.
 	 * @param {string} classification - The classification of the event.
 	 * @param {number} quantity - The quantity of tickets available for the event.
 	 */
