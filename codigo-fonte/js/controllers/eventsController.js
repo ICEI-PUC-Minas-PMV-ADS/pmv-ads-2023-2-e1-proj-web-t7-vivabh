@@ -150,37 +150,34 @@ export class EventsController {
 	async populateEventsSearchContainer(filteredEvents = null) {
 		retryQuerySelector('#eventsSearchContainer', async (element) => {
 			const events = filteredEvents || (await this.getEvents());
-			element.innerHTML = '';
-			const eventsHtml = events.map((event) => {
+			const fragment = document.createDocumentFragment();
+
+			events.forEach((event) => {
 				const { month, day } = formatDate(event.date);
-				return `
-					<div class='event'>
+				const eventContainer = document.createElement('div');
+				eventContainer.className = 'event';
 
-						<div class='image-container'>
+				eventContainer.innerHTML = `
+        <div class='image-container'>
+          <img  loading="lazy" src='${event.image}' alt='${event.name}' />
+        </div>
+        <div class='info'>
+          <div class='date'>
+            <p class='month'>${month}</p>
+            <p class='day'>${day}</p>
+          </div>
+          <div class='content'>
+            <h2>nome ${event.name}</h2>
+            <p class='description'>descricao ${event.description}</p>
+          </div>
+        </div>
+      `;
 
-							<img src='${event.image}' alt='${event.name}' />
-
-						</div>
-
-						<div class='info'>
-<div class='date'>
-
-								<p class='month'>${month}</p>
-								<p class='day'>${day}</p>
-							</div>
-							<div class='content'>
-							<h2>nome ${event.name}</h2>
-							<p class='description'>descricao ${event.description}</p>
-</div >
-						</div>
-
-					</div>
-
-
-					`;
+				fragment.appendChild(eventContainer);
 			});
 
-			element.innerHTML += eventsHtml.join('');
+			element.innerHTML = '';
+			element.appendChild(fragment);
 		});
 	}
 
@@ -211,6 +208,23 @@ export class EventsController {
 				this.populateEventsSearchContainer(events);
 			});
 		});
+	}
+
+	async filterEventsWithQueryParams() {
+		const currentURL = window.location.href;
+
+		const urlParams = new URLSearchParams(currentURL.split('?')[1]);
+
+		const category = urlParams.get('categoria');
+
+		if (category) {
+			retryQuerySelector('#filterCategory', (element) => {
+				element.value = category;
+			});
+			let events = await this.getFilteredEvents({ category });
+
+			this.populateEventsSearchContainer(events);
+		}
 	}
 }
 
