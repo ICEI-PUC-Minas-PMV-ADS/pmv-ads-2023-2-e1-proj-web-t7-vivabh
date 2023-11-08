@@ -38,7 +38,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
 # Hospedagem
 
-* [VivaBH](https://vivabhpuc.netlify.app/)
+* [VivaBH](https://viva-bh.vercel.app/)
   
 # Código-Fonte
 
