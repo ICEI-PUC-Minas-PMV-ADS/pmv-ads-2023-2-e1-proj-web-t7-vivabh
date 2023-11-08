@@ -15,3 +15,11 @@ export function retryQuerySelector(selector, callback) {
 
 	attempt();
 }
+
+export const formatDate = (date) => {
+	const originalDate = new Date(date);
+
+	const month = originalDate.toLocaleString('default', { month: 'short' });
+	const day = originalDate.getUTCDate();
+	return { month, day };
+};

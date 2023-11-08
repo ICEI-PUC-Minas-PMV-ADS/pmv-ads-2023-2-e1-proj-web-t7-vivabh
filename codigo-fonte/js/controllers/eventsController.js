@@ -1,4 +1,4 @@
-import { retryQuerySelector } from '../helpers.js';
+import { formatDate, retryQuerySelector } from '../helpers.js';
 import { categoryRepository } from '../repositories/categoriesRepository.js';
 import { eventsRepository } from '../repositories/eventsRepository.js';
 
@@ -152,6 +152,7 @@ export class EventsController {
 			const events = filteredEvents || (await this.getEvents());
 			element.innerHTML = '';
 			const eventsHtml = events.map((event) => {
+				const { month, day } = formatDate(event.date);
 				return `
 					<div class='event'>
 
@@ -162,23 +163,15 @@ export class EventsController {
 						</div>
 
 						<div class='info'>
+<div class='date'>
 
+								<p class='month'>${month}</p>
+								<p class='day'>${day}</p>
+							</div>
+							<div class='content'>
 							<h2>nome ${event.name}</h2>
-
-							<p>endereco ${event.address}</p>
-
-							<p>data ${event.date}</p>
-
-							<p>hora ${event.time}</p>
-
-							<p>classificacao ${event.classification}</p>
-
-							<p>quantidade ${event.quantity}</p>
-
-							<p>categoria ${event.category.name}</p>
-
 							<p class='description'>descricao ${event.description}</p>
-
+</div >
 						</div>
 
 					</div>

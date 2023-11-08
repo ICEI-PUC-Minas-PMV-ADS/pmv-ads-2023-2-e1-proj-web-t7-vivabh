@@ -37,7 +37,7 @@ export const createInitialData = () => {
 				id: index,
 				name: faker.lorem.words(2),
 				description: faker.lorem.words({ min: 10, max: 200 }),
-				date: faker.date.future().getDate(),
+				date: faker.date.future(),
 				time: faker.date.future().getTime(),
 				address: faker.location.streetAddress(),
 				image: faker.image.url(),
