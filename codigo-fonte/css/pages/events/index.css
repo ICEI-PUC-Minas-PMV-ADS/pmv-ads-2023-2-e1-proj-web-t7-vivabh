@@ -93,6 +93,14 @@
 		grid-template-columns: repeat(1, 1fr);
 	}
 
+	#events-container .heading .filters {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	#events-container .heading .filters .filter {
+		width: 100%;
+	}
 	#events-container .heading .filters .filter select {
 		width: 100%;
 	}
