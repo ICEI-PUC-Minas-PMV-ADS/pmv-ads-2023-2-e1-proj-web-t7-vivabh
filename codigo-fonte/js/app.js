@@ -1,16 +1,49 @@
-import { handleLocation } from './router';
-import { UIController } from './controllers/uiController';
-import { EventsController } from './controllers/eventsController';
+import { handleLocation, routes } from './router';
+import { createInitialData } from './initialData';
+import { uiController } from './controllers/uiController';
+import { eventsController } from './controllers/eventsController';
 
-const eventsController = new EventsController();
 handleLocation();
-const uiController = new UIController();
+
+window.onload = () => {
+	createInitialData();
+};
+
+const IsNewEventPage = () => {
+	return (
+		window.location.pathname ===
+		Object.keys(routes).find((key) => routes[key] === '/pages/events/new.html')
+	);
+};
+
+const IsHomePage = () => {
+	return (
+		window.location.pathname ===
+		Object.keys(routes).find((key) => routes[key] === '/pages/home.html')
+	);
+};
+
+const IsEventsPage = () => {
+	return (
+		window.location.pathname ===
+		Object.keys(routes).find(
+			(key) => routes[key] === '/pages/events/index.html'
+		)
+	);
+};
 
 document.addEventListener('DOMContentLoaded', () => {
-	if (window.location.pathname === '/events/new') {
-		setTimeout(() => {
-			eventsController.initNewEventForm();
-		}, 2000);
+	if (IsNewEventPage()) {
+		eventsController.initNewEventForm();
 	}
+
+	if (IsEventsPage()) {
+		uiController.populateFilterCategoriesSelect();
+	}
+
+	if (IsHomePage()) {
+		uiController.populateCategoriesNav();
+	}
+
 	uiController.initDrawer();
 });

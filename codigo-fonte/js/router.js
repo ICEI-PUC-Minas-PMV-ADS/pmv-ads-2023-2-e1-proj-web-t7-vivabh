@@ -9,7 +9,7 @@ export const route = (event) => {
 	handleLocation();
 };
 
-const routes = {
+export const routes = {
 	404: '/pages/404.html',
 	'/': '/pages/home.html',
 	'/login': '/pages/login.html',
@@ -27,5 +27,3 @@ export const handleLocation = async () => {
 
 window.onpopstate = handleLocation;
 window.route = route;
-
-handleLocation();
