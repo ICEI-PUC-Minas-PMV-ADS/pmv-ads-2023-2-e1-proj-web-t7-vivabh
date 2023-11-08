@@ -12,6 +12,7 @@
     "vite": "^4.5.0"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.2.0",
     "uuid": "^9.0.1"
   }
 }
