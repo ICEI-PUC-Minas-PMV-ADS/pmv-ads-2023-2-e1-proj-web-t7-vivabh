@@ -1,52 +1,64 @@
-import { handleLocation, routes } from './router';
 import { createInitialData } from './initialData';
 import { uiController } from './controllers/uiController';
 import { eventsController } from './controllers/eventsController';
 
-handleLocation();
-
-window.onload = () => {
-	createInitialData();
+export const routes = {
+	'/': '/views/home.html',
+	'/login': '/views/login.html',
+	'/register': '/views/register.html',
+	'/eventos/novo': '/views/events/new.html',
+	'/eventos': '/views/events/index.html',
 };
 
-const IsNewEventPage = () => {
-	return (
-		window.location.pathname ===
-		Object.keys(routes).find((key) => routes[key] === '/pages/events/new.html')
-	);
-};
-
-const IsHomePage = () => {
-	return (
-		window.location.pathname ===
-		Object.keys(routes).find((key) => routes[key] === '/pages/home.html')
-	);
-};
-
-const IsEventsPage = () => {
-	return (
-		window.location.pathname ===
-		Object.keys(routes).find(
-			(key) => routes[key] === '/pages/events/index.html'
-		)
-	);
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-	if (IsNewEventPage()) {
+const callControllerByRoute = (pathName) => {
+	if (pathName === '/eventos/novo') {
 		eventsController.initNewEventForm();
 	}
 
-	if (IsEventsPage()) {
+	if (pathName === '/eventos') {
 		uiController.populateFilterCategoriesSelect();
 		eventsController.handleFilterChange();
 		eventsController.populateEventsSearchContainer();
 		eventsController.filterEventsWithQueryParams();
 	}
 
-	if (IsHomePage()) {
+	if (pathName === '/') {
 		uiController.populateCategoriesNav();
 	}
+};
 
-	uiController.initDrawer();
-});
+export const handleLocation = async () => {
+	const path = window.location.pathname;
+	const route = routes[path];
+	if (!route) {
+		window.location = '/';
+	}
+	callControllerByRoute(path);
+	const html = await fetch(route).then((data) => data.text());
+	document.getElementById('app').innerHTML = html;
+};
+
+export const route = (event) => {
+	event = event || window.event;
+	event.preventDefault();
+	window.history.pushState(
+		{},
+		'',
+		event.target.href || event.currentTarget.href
+	);
+	handleLocation();
+};
+
+const initializeApp = () => {
+	handleLocation();
+
+	window.onload = () => {
+		createInitialData();
+	};
+
+	document.addEventListener('DOMContentLoaded', () => {
+		uiController.initDrawer();
+	});
+};
+
+initializeApp();
