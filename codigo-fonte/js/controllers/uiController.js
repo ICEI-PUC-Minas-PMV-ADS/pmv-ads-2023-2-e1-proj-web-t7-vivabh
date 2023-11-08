@@ -33,7 +33,7 @@ class UIController {
 				.map(
 					(category) => `
 			<li>
-				<a href="/eventos?categoria=${category.name}">
+				<a href="/eventos?categoria=${category.name}" onclick="route()">
 				 <img src="${category.icon}" alt="${category.name}" />
 				</a>
 			</li>

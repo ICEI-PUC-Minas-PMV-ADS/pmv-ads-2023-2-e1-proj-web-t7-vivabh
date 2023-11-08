@@ -24,7 +24,7 @@ function getHTMLFilesRecursively(dir, base = '') {
 	return htmlFiles;
 }
 
-const pagesDir = resolve(__dirname, 'pages');
+const pagesDir = resolve(__dirname, 'views');
 const inputEntries = getHTMLFilesRecursively(pagesDir);
 
 export default defineConfig({
