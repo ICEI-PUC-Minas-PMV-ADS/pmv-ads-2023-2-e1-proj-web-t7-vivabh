@@ -65,7 +65,10 @@ class UIController {
 
 		if (currentUser) {
 			retryQuerySelector('#main-header .nav-menu', (element) => {
-				element.innerHTML = `<a href="/admin" onclick="route()">Seus eventos</a>`;
+				element.innerHTML = `<h5>Olá, ${currentUser.name}!</h5> <a href="/admin" onclick="route()">Seus eventos</a>`;
+			});
+			retryQuerySelector('#main-header .drawer-menu', (element) => {
+				element.innerHTML = `<h5>Olá, ${currentUser.name}!</h5> <a href="/admin" onclick="route()">Seus eventos</a>`;
 			});
 		}
 	}

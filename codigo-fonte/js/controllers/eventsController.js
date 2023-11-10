@@ -51,20 +51,20 @@ export class EventsController {
 		return id;
 	}
 
-	async getCategories() {
+	getCategories() {
 		const categories = this.categoriesRepository.getAll();
 		return categories.map((category) => category.name);
 	}
 
-	async getClassifications() {
+	getClassifications() {
 		return this.eventsRepository.getClassifications();
 	}
 
 	previewImage() {
-		const fileInput = retryQuerySelector(
+		const fileInput = document.querySelector(
 			'#new-event-form .image-container input[type=file]#image'
 		);
-		const imagePreview = retryQuerySelector(
+		const imagePreview = document.querySelector(
 			'#new-event-form .image-container #image-preview'
 		);
 
@@ -86,19 +86,23 @@ export class EventsController {
 		event.preventDefault();
 
 		const getInputValue = (name) =>
-			form.querySelector(`input[name="${name}"]`).value;
+			document.querySelector(`input[name="${name}"]`).value;
 		const getSelectValue = (name) =>
-			form.querySelector(`select[name="${name}"]`).value;
+			document.querySelector(`select[name="${name}"]`).value;
 
-		const name = getInputValue('name');
-		const description = getInputValue('description');
-		const date = getInputValue('date');
+		const name = document.querySelector('input[name="name"]').value;
+		const description = document.querySelector(
+			'textarea[name="description"]'
+		).value;
+		const date = document.querySelector('input[name="date"]').value;
 		const image = await this.returnImageFromFieldFile();
-		const category = getSelectValue('category');
-		const time = getInputValue('time');
-		const address = getInputValue('address');
-		const quantity = getInputValue('quantity');
-		const classification = getSelectValue('classification');
+		const category = document.querySelector('select[name="category"]').value;
+		const time = document.querySelector('input[name="time"]').value;
+		const address = document.querySelector('input[name="address"]').value;
+		const quantity = document.querySelector('input[name="quantity"]').value;
+		const classification = document.querySelector(
+			'select[name="classification"]'
+		).value;
 
 		const newEvent = {
 			name,
@@ -124,13 +128,13 @@ export class EventsController {
 		alert('Preencha todos os campos!');
 	}
 
-	async createOptions(selectName, dataFetcher) {
-		const data = await dataFetcher();
-		const select = retryQuerySelector(`select[name="${selectName}"]`);
+	createOptions(selectName, data) {
 		const options = data.map(
 			(item) => `<option value="${item}">${item}</option>`
 		);
-		select.innerHTML += options.join('');
+		retryQuerySelector(`select[name="${selectName}"]`, (select) => {
+			select.innerHTML += options.join('');
+		});
 	}
 
 	async initNewEventForm() {
@@ -138,18 +142,22 @@ export class EventsController {
 			form.addEventListener('submit', async (event) => {
 				await this.handleFormSubmission(event, form);
 			});
-
-			await this.createOptions('classification', this.getClassifications);
-			await this.createOptions('category', this.getCategories);
-
-			const imageInput = retryQuerySelector(
-				'#new-event-form .image-container input[type=file]#image'
-			);
-
-			imageInput.addEventListener('change', () => {
-				this.previewImage();
-			});
 		});
+
+		retryQuerySelector(
+			'#new-event-form .image-container input[type=file]#image',
+			(el) => {
+				el.addEventListener('change', () => {
+					this.previewImage();
+				});
+			}
+		);
+
+		const classifications = this.getClassifications();
+		const categories = this.getCategories();
+
+		this.createOptions('classification', classifications);
+		this.createOptions('category', categories);
 	}
 
 	createEditButton(event) {
