@@ -20,7 +20,8 @@ export class EventsRepository {
 			event.image,
 			event.category,
 			event.classification,
-			event.quantity
+			event.quantity,
+			event.owner
 		);
 
 		if (!newEvent.validateRequiredFields()) return false;
@@ -62,7 +63,7 @@ export class EventsRepository {
 	}
 
 	delete(id) {
-		this.events = this.events.filter((event) => event.getId() !== id);
+		this.events = this.events.filter((event) => event.id !== id);
 		this.saveEvents();
 	}
 
@@ -71,6 +72,10 @@ export class EventsRepository {
 	}
 	getClassifications() {
 		return ['Livre', '10 anos', '12 anos', '14 anos', '16 anos', '18 anos'];
+	}
+
+	getByOwner(owner) {
+		return this.events.filter((event) => event.owner.id === owner.id);
 	}
 }
 

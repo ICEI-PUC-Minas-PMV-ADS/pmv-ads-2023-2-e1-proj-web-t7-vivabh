@@ -1,39 +1,38 @@
 <form id="formRegister">
-    <h1><img src="../assets/logo.svg" hre></h1>
+	<h1><img src="../assets/logo.svg" hre /></h1>
 
-    <div class="input-single">
+	<div class="input-single">
+		<label for="nome">Nome:</label>
 
-        <label for="nome">Nome:</label>
+		<input type="text" id="nome" name="name" required />
+	</div>
+	<br />
 
-        <input type="text" id="nome" name="nome" required>
-        
-    </div><br>
+	<div class="input-single">
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required />
+	</div>
+	<br />
 
-        <div class="input-single">
+	<div class="input-single">
+		<label for="senha">Senha:</label>
+		<input type="password" id="senha" name="password" required />
+	</div>
+	<br />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-       
-    </div><br>
+	<div class="input-single">
+		<label for="confirmarSenha">Confirmar senha:</label>
+		<input
+			type="password"
+			id="confirmarSenha"
+			name="passwordConfirmation"
+			required
+		/>
+	</div>
+	<br />
 
-        <div class="input-single">
+	<button type="submit">Criar Conta</button>
+	<br />
 
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required>
-        
-    </div><br>
-
-        <div class="input-single">
-
-        <label for="confirmarSenha">Confirmar senha:</label>
-        <input type="password" id="confirmarSenha" name="confirmarSenha" required>
-        
-    </div><br>
-
-        <button type="submit">Criar Conta</button>
-        <br>
-
-     <a href="Login.html"
-         id="conta">Já tenho Login</a> 
-        
-    </form>
+	<a href="Login.html" id="conta">Já tenho Login</a>
+</form>

@@ -1,18 +1,39 @@
 import { createInitialData } from './initialData';
 import { uiController } from './controllers/uiController';
 import { eventsController } from './controllers/eventsController';
+import { userController } from './controllers/userController';
 
 export const routes = {
 	'/': '/views/home.html',
 	'/login': '/views/login.html',
-	'/register': '/views/register.html',
-	'/eventos/novo': '/views/events/new.html',
+	'/criar-conta': '/views/register.html',
+	'/admin/eventos/novo': '/views/admin/new-event.html',
 	'/eventos': '/views/events/index.html',
+	'/admin': '/views/admin/index.html',
+};
+
+const protectedRoutes = ['/admin/eventos/novo', '/admin'];
+
+const isAuthenticated = () => {
+	return localStorage.getItem('currentUser');
 };
 
 const callControllerByRoute = (pathName) => {
-	if (pathName === '/eventos/novo') {
+	if (protectedRoutes.includes(pathName) && !isAuthenticated()) {
+		window.location = '/login';
+		return;
+	}
+
+	if (pathName === '/admin') {
+		eventsController.populateEventsAdminPanel();
+	}
+
+	if (pathName === '/admin/eventos/novo') {
 		eventsController.initNewEventForm();
+	}
+
+	if (pathName === '/criar-conta') {
+		userController.initForm();
 	}
 
 	if (pathName === '/eventos') {
@@ -24,6 +45,10 @@ const callControllerByRoute = (pathName) => {
 
 	if (pathName === '/') {
 		uiController.populateCategoriesNav();
+	}
+
+	if (pathName === '/login') {
+		userController.initLoginForm();
 	}
 };
 
@@ -57,6 +82,7 @@ const initializeApp = () => {
 	};
 
 	document.addEventListener('DOMContentLoaded', () => {
+		uiController.headerChangeWhenLogin();
 		uiController.initDrawer();
 	});
 };

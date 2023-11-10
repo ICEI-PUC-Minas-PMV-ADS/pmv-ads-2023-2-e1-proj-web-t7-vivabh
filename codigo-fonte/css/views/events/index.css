@@ -64,7 +64,8 @@
 	outline: none;
 }
 
-#events-container .events {
+#events-container .events,
+.events-cards {
 	display: grid;
 	width: 100%;
 	grid-template-columns: repeat(3, 33%);
@@ -72,7 +73,8 @@
 	margin-bottom: 2rem;
 }
 
-#events-container .events .event {
+#events-container .events .event,
+.events-cards .event {
 	display: flex;
 	flex-direction: column;
 	background-color: #fff;
@@ -83,34 +85,40 @@
 	max-width: 343.047px;
 	max-height: 328.518px;
 }
-#events-container .events .event .image-container {
+#events-container .events .event .image-container,
+.events-cards .event .image-container {
 	width: 100%;
 	height: 60%;
 	overflow: hidden;
 }
-#events-container .events .event .image-container img {
+#events-container .events .event .image-container img,
+.events-cards .event .image-container img {
 	width: 100%;
 	height: auto;
 	object-fit: cover;
 }
 
-#events-container .events .event .info {
+#events-container .events .event .info,
+.events-cards .event .info {
 	width: 100%;
-	padding: 1rem 1.5rem;
+	padding: 0.75rem;
 	height: 40%;
 	display: flex;
 	gap: 1rem;
+	justify-content: space-around;
+	align-items: center;
 }
 
-#events-container .events .event .info .date {
+#events-container .events .event .info .date,
+.events-cards .event .info .date {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 0.5rem;
 }
 
-#events-container .events .event .info .date .day {
+#events-container .events .event .info .date .day,
+.events-cards .event .info .date .day {
 	color: #000;
 	font-family: Poppins;
 	font-size: 28.429px;
@@ -119,7 +127,8 @@
 	line-height: normal;
 }
 
-#events-container .events .event .info .date .month {
+#events-container .events .event .info .date .month,
+.events-cards .event .info .date .month {
 	color: #3d37f1;
 	text-align: center;
 	font-family: Poppins;
@@ -128,7 +137,8 @@
 	font-weight: 700;
 	line-height: normal;
 }
-#events-container .events .event .info h2 {
+#events-container .events .event .info h2,
+.events-cards .event .info h2 {
 	color: #000;
 	font-family: Poppins;
 	font-size: 16px;
@@ -137,12 +147,14 @@
 	line-height: 150%; /* 24px */
 }
 
-#events-container .events .event .content {
+#events-container .events .event .content,
+.events-cards .event .content {
 	width: 84%;
 	height: 60%;
 }
 
-#events-container .events .event .description {
+#events-container .events .event .description,
+.events-cards .event .description {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	color: #6a6a6a;
@@ -155,11 +167,13 @@
 	/* 21px */
 }
 
-#events-container .events .event:hover {
+#events-container .events .event:hover,
+.events-cards .event:hover {
 	transform: scale(1.05);
 }
 @media (max-width: 1029px) {
-	#events-container .events {
+	#events-container .events,
+	.events-cards {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
@@ -176,12 +190,14 @@
 }
 
 @media (max-width: 767px) {
-	#events-container .events {
+	#events-container .events,
+	.events-cards {
 		grid-template-columns: repeat(1, 1fr);
 		justify-items: center;
 	}
 
-	#events-container .events .event {
+	#events-container .events .event,
+	.events-cards .event {
 		max-width: 403.047px;
 		min-height: 340px;
 	}

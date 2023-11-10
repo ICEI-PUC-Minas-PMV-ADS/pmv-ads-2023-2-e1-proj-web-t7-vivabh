@@ -59,6 +59,16 @@ class UIController {
 			element.innerHTML = options;
 		});
 	}
+
+	headerChangeWhenLogin() {
+		const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+		if (currentUser) {
+			retryQuerySelector('#main-header .nav-menu', (element) => {
+				element.innerHTML = `<a href="/admin" onclick="route()">Seus eventos</a>`;
+			});
+		}
+	}
 }
 
 const uiController = new UIController();

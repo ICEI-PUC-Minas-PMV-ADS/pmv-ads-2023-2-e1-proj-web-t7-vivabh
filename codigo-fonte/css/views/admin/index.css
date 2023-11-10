@@ -1,0 +1,64 @@
+#admin-panel {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding-top: 2rem;
+}
+
+#admin-panel .buttons {
+	display: flex;
+	gap: 2rem;
+}
+#admin-panel .buttons a {
+	position: relative;
+	color: #4361ee;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+	transition: all 0.3s ease-in-out;
+	border: #4361ee solid 2px;
+	padding: 10px 25px;
+	border-radius: 99999px;
+}
+
+#admin-panel .buttons a:hover {
+	color: #3c47e9;
+	border: #3c47e9 solid 2px;
+}
+
+#admin-panel h2 {
+	margin-bottom: 1rem;
+}
+
+#admin-panel .event {
+	position: relative;
+}
+
+#admin-panel .event .buttons-container {
+	position: absolute;
+	display: flex;
+	gap: 0.5rem;
+	top: 5%;
+	right: 0.5rem;
+}
+
+#admin-panel .event .buttons-container button {
+	background: #4361ee;
+	border-radius: 99999px;
+	border: none;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	transition: all 0.3s ease-in-out;
+}
+
+#admin-panel .event .buttons-container button:hover {
+	background: #3c47e9;
+	padding: 0.5rem 1.5rem;
+}
+
+#admin-panel .event .buttons-container button img {
+	width: 14px;
+	height: 14px;
+}

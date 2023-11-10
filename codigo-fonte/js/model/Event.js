@@ -1,4 +1,5 @@
 import { Category } from './Category';
+import { User } from './User';
 
 /**
  * Represents an event with various properties.
@@ -20,6 +21,7 @@ export class Event {
 	 * @param {Category} category - The category of the event.
 	 * @param {string} classification - The classification of the event.
 	 * @param {number} quantity - The quantity of tickets available for the event.
+	 * @param {User} owner - The owner of the event.
 	 */
 	constructor(
 		id,
@@ -31,7 +33,8 @@ export class Event {
 		image,
 		category,
 		classification,
-		quantity
+		quantity,
+		owner
 	) {
 		this.id = id;
 		this.name = name;
@@ -43,6 +46,7 @@ export class Event {
 		this.image = image;
 		this.classification = classification;
 		this.quantity = quantity;
+		this.owner = owner;
 	}
 
 	/**
@@ -60,7 +64,8 @@ export class Event {
 			!this.image ||
 			!this.category ||
 			!this.classification ||
-			!this.quantity
+			!this.quantity ||
+			!this.owner
 		) {
 			return false;
 		}

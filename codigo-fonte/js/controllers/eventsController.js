@@ -1,11 +1,13 @@
 import { formatDate, retryQuerySelector } from '../helpers.js';
 import { categoryRepository } from '../repositories/categoriesRepository.js';
 import { eventsRepository } from '../repositories/eventsRepository.js';
+import { userRepository } from '../repositories/usersRepository.js';
 
 export class EventsController {
 	constructor() {
 		this.eventsRepository = eventsRepository;
 		this.categoriesRepository = categoryRepository;
+		this.userRepository = userRepository;
 	}
 
 	async getEvents() {
@@ -16,17 +18,27 @@ export class EventsController {
 		return this.eventsRepository.getByCategory(category);
 	}
 
+	async getEventsByOwner(owner) {
+		return this.eventsRepository.getByOwner(owner);
+	}
+
 	async getEvent(id) {
 		return this.eventsRepository.get(id);
 	}
 
 	async createEvent(event) {
 		const category = this.categoriesRepository.getByName(event.category);
-
-		return this.eventsRepository.add({
+		const owner = this.userRepository.getCurrentUser();
+		let newEvent = {
 			...event,
-			category,
-		});
+			category: category.name,
+			owner,
+		};
+
+		newEvent = this.eventsRepository.add(newEvent);
+		if (!newEvent) return false;
+
+		return newEvent;
 	}
 
 	async updateEvent(event) {
@@ -49,10 +61,10 @@ export class EventsController {
 	}
 
 	previewImage() {
-		const fileInput = document.querySelector(
+		const fileInput = retryQuerySelector(
 			'#new-event-form .image-container input[type=file]#image'
 		);
-		const imagePreview = document.querySelector(
+		const imagePreview = retryQuerySelector(
 			'#new-event-form .image-container #image-preview'
 		);
 
@@ -70,22 +82,23 @@ export class EventsController {
 		return localStorage.getItem('preview-image');
 	}
 
-	async handleFormSubmission(event, _form) {
+	async handleFormSubmission(event, form) {
 		event.preventDefault();
 
-		const name = document.querySelector('input[name="name"]').value;
-		const description = document.querySelector(
-			'textarea[name="description"]'
-		).value;
-		const date = document.querySelector('input[name="date"]').value;
+		const getInputValue = (name) =>
+			form.querySelector(`input[name="${name}"]`).value;
+		const getSelectValue = (name) =>
+			form.querySelector(`select[name="${name}"]`).value;
+
+		const name = getInputValue('name');
+		const description = getInputValue('description');
+		const date = getInputValue('date');
 		const image = await this.returnImageFromFieldFile();
-		const category = document.querySelector('select[name="category"]').value;
-		const time = document.querySelector('input[name="time"]').value;
-		const address = document.querySelector('input[name="address"]').value;
-		const quantity = document.querySelector('input[name="quantity"]').value;
-		const classification = document.querySelector(
-			'select[name="classification"]'
-		).value;
+		const category = getSelectValue('category');
+		const time = getInputValue('time');
+		const address = getInputValue('address');
+		const quantity = getInputValue('quantity');
+		const classification = getSelectValue('classification');
 
 		const newEvent = {
 			name,
@@ -102,42 +115,34 @@ export class EventsController {
 		const result = await this.createEvent(newEvent);
 
 		if (result) {
+			alert('Evento criado com sucesso!');
 			localStorage.removeItem('preview-image');
-			window.location.href = '/eventos';
+			window.location.href = '/admin';
 			return;
 		}
 
 		alert('Preencha todos os campos!');
 	}
 
-	async createClassificationOptions() {
-		const classifications = await this.getClassifications();
-		const select = document.querySelector('select[name="classification"]');
-		const options = classifications.map((classification) => {
-			return `<option value="${classification}">${classification}</option>`;
-		});
-		select.innerHTML += options.join('');
-	}
-
-	async createCategoryOptions() {
-		const categories = await this.getCategories();
-		const select = document.querySelector('select[name="category"]');
-		const options = categories.map((category) => {
-			return `<option value="${category}">${category}</option>`;
-		});
+	async createOptions(selectName, dataFetcher) {
+		const data = await dataFetcher();
+		const select = retryQuerySelector(`select[name="${selectName}"]`);
+		const options = data.map(
+			(item) => `<option value="${item}">${item}</option>`
+		);
 		select.innerHTML += options.join('');
 	}
 
 	async initNewEventForm() {
-		retryQuerySelector('#new-event-form', async (element) => {
-			element.addEventListener('submit', async (event) => {
-				await this.handleFormSubmission(event, element);
+		retryQuerySelector('#new-event-form', async (form) => {
+			form.addEventListener('submit', async (event) => {
+				await this.handleFormSubmission(event, form);
 			});
 
-			this.createClassificationOptions();
-			await this.createCategoryOptions();
+			await this.createOptions('classification', this.getClassifications);
+			await this.createOptions('category', this.getCategories);
 
-			const imageInput = document.querySelector(
+			const imageInput = retryQuerySelector(
 				'#new-event-form .image-container input[type=file]#image'
 			);
 
@@ -147,19 +152,43 @@ export class EventsController {
 		});
 	}
 
-	async populateEventsSearchContainer(filteredEvents = null) {
-		retryQuerySelector('#eventsSearchContainer', async (element) => {
-			const events = filteredEvents || (await this.getEvents());
-			const fragment = document.createDocumentFragment();
+	createEditButton(event) {
+		const editButton = document.createElement('button');
+		editButton.className = 'edit';
+		editButton.innerHTML = `<img class='button' src='assets/icons/edit.svg' ='Editar evento' />`;
+		editButton.addEventListener('click', () => {
+			window.location.href = `/editar-evento?id=${event.id}`;
+		});
+		return editButton;
+	}
 
-			events.forEach((event) => {
-				const { month, day } = formatDate(event.date);
-				const eventContainer = document.createElement('div');
-				eventContainer.className = 'event';
+	createDeleteButton(event) {
+		const deleteButton = document.createElement('button');
+		deleteButton.className = 'delete';
+		deleteButton.innerHTML = `
+      <img class='button' src='assets/icons/trash.svg' alt='Deletar evento' />
+    `;
+		deleteButton.addEventListener('click', async () => {
+			const confirm = window.confirm(
+				'Você tem certeza que deseja deletar este evento?'
+			);
+			if (!confirm) return;
+			await this.deleteEvent(event.id);
+			this.populateEventsAdminPanel();
+		});
+		return deleteButton;
+	}
 
-				eventContainer.innerHTML = `
+	async populateEventsContainer(element, events, isAdminPanel = false) {
+		const fragment = document.createDocumentFragment();
+		events.forEach((event) => {
+			const { month, day } = formatDate(event.date);
+			const eventContainer = document.createElement('div');
+			eventContainer.className = 'event';
+
+			eventContainer.innerHTML = `
         <div class='image-container'>
-          <img  loading="lazy" src='${event.image}' alt='${event.name}' />
+          <img loading="lazy" src='${event.image}' alt='${event.name}' />
         </div>
         <div class='info'>
           <div class='date'>
@@ -167,26 +196,49 @@ export class EventsController {
             <p class='day'>${day}</p>
           </div>
           <div class='content'>
-            <h2>nome ${event.name}</h2>
+            <h2>${event.name}</h2>
             <p class='description'>descricao ${event.description}</p>
           </div>
         </div>
       `;
 
-				fragment.appendChild(eventContainer);
-			});
+			if (isAdminPanel) {
+				const buttonsContainer = document.createElement('div');
+				buttonsContainer.className = 'buttons-container';
+				buttonsContainer.appendChild(this.createEditButton(event));
+				buttonsContainer.appendChild(this.createDeleteButton(event));
+				eventContainer.appendChild(buttonsContainer);
+			}
 
-			element.innerHTML = '';
-			element.appendChild(fragment);
+			fragment.appendChild(eventContainer);
+		});
+
+		element.innerHTML = '';
+		element.appendChild(fragment);
+	}
+
+	async populateEventsAdminPanel() {
+		const events = await this.getEventsByOwner(
+			this.userRepository.getCurrentUser()
+		);
+		retryQuerySelector('#admin-panel .events-cards', (element) => {
+			this.populateEventsContainer(element, events, true);
+		});
+	}
+
+	async populateEventsSearchContainer(filteredEvents = null) {
+		retryQuerySelector('#eventsSearchContainer', async (element) => {
+			const events = filteredEvents || (await this.getEvents());
+			this.populateEventsContainer(element, events);
 		});
 	}
 
 	async getFilteredEvents(options) {
-		if (!options) return;
+		if (!options) return [];
 		let events = [];
 
 		if (options.category) {
-			events = (await this.getByCategory(options.category)) || [];
+			events = await this.getByCategory(options.category);
 		}
 
 		if (options.classification) {
@@ -202,9 +254,7 @@ export class EventsController {
 		retryQuerySelector('#filterCategory', (element) => {
 			element.addEventListener('change', async () => {
 				const category = element.value;
-
-				let events = await this.getFilteredEvents({ category });
-
+				const events = await this.getFilteredEvents({ category });
 				this.populateEventsSearchContainer(events);
 			});
 		});
@@ -212,17 +262,15 @@ export class EventsController {
 
 	async filterEventsWithQueryParams() {
 		const currentURL = window.location.href;
-
 		const urlParams = new URLSearchParams(currentURL.split('?')[1]);
-
 		const category = urlParams.get('categoria');
 
 		if (category) {
 			retryQuerySelector('#filterCategory', (element) => {
 				element.value = category;
 			});
-			let events = await this.getFilteredEvents({ category });
 
+			const events = await this.getFilteredEvents({ category });
 			this.populateEventsSearchContainer(events);
 		}
 	}
