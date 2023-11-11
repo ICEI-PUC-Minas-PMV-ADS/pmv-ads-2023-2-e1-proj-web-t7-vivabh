@@ -8,6 +8,7 @@ export class EventsController {
 		this.eventsRepository = eventsRepository;
 		this.categoriesRepository = categoryRepository;
 		this.userRepository = userRepository;
+		this.options = {};
 	}
 
 	async getEvents() {
@@ -82,13 +83,8 @@ export class EventsController {
 		return localStorage.getItem('preview-image');
 	}
 
-	async handleFormSubmission(event, form) {
+	async handleFormSubmission(event, _form) {
 		event.preventDefault();
-
-		const getInputValue = (name) =>
-			document.querySelector(`input[name="${name}"]`).value;
-		const getSelectValue = (name) =>
-			document.querySelector(`select[name="${name}"]`).value;
 
 		const name = document.querySelector('input[name="name"]').value;
 		const description = document.querySelector(
@@ -242,45 +238,45 @@ export class EventsController {
 	}
 
 	async getFilteredEvents(options) {
-		if (!options) return [];
-		let events = [];
+		let events = await this.getEvents();
+		if (!options) return events;
 
 		if (options.category) {
-			events = await this.getByCategory(options.category);
-		}
-
-		if (options.classification) {
-			const allEvents = await this.getEvents();
-			events = allEvents.filter(
-				(event) => event.classification === options.classification
+			events = events.filter(
+				(event) => event.category.name === options.category
 			);
 		}
 
+		if (options.classification) {
+			events = events.filter(
+				(event) => event.classification === options.classification
+			);
+		}
 		return events;
 	}
 
 	handleFilterChange() {
-		retryQuerySelector('#filterCategory', (element) => {
-			element.addEventListener('change', async () => {
-				const category = element.value;
-				const options = {
-					category,
-				};
-				const events = await this.getFilteredEvents(options);
-				this.populateEventsSearchContainer(events);
-			});
-		});
+		const filterElements = [
+			{ id: '#filterCategory', key: 'category' },
+			{ id: '#filterClassification', key: 'classification' },
+		];
 
-		retryQuerySelector('#filterClassification', (element) => {
-			element.addEventListener('change', async () => {
-				const classification = element.value;
-				const options = {
-					classification,
-				};
-				const events = await this.getFilteredEvents(options);
-				this.populateEventsSearchContainer(events);
+		filterElements.forEach(({ id, key }) => {
+			retryQuerySelector(id, (element) => {
+				element.addEventListener('change', async () => {
+					this.options = {
+						...this.options,
+						[key]: element.value,
+					};
+					await this.getFilteredEventsAndPopulateContainer();
+				});
 			});
 		});
+	}
+
+	async getFilteredEventsAndPopulateContainer() {
+		const events = await this.getFilteredEvents(this.options);
+		this.populateEventsSearchContainer(events);
 	}
 
 	async filterEventsWithQueryParams() {
