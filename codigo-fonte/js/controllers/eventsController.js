@@ -289,8 +289,12 @@ export class EventsController {
 				element.value = category;
 			});
 
-			const events = await this.getFilteredEvents({ category });
-			this.populateEventsSearchContainer(events);
+			this.options = {
+				...this.options,
+				category,
+			};
+
+			await this.getFilteredEventsAndPopulateContainer();
 		}
 	}
 }
