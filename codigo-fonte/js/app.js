@@ -8,11 +8,16 @@ export const routes = {
 	'/login': '/views/login.html',
 	'/criar-conta': '/views/register.html',
 	'/admin/eventos/novo': '/views/admin/new-event.html',
+	'/admin/eventos/editar': '/views/admin/edit-event.html',
 	'/eventos': '/views/events/index.html',
 	'/admin': '/views/admin/index.html',
 };
 
-const protectedRoutes = ['/admin/eventos/novo', '/admin'];
+const protectedRoutes = [
+	'/admin/eventos/novo',
+	'/admin',
+	'/admin/eventos/editar',
+];
 
 const isAuthenticated = () => {
 	return localStorage.getItem('currentUser');

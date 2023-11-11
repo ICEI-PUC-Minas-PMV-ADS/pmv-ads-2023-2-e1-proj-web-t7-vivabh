@@ -250,7 +250,8 @@ export class EventsController {
 		}
 
 		if (options.classification) {
-			events = events.filter(
+			const allEvents = await this.getEvents();
+			events = allEvents.filter(
 				(event) => event.classification === options.classification
 			);
 		}
@@ -262,7 +263,21 @@ export class EventsController {
 		retryQuerySelector('#filterCategory', (element) => {
 			element.addEventListener('change', async () => {
 				const category = element.value;
-				const events = await this.getFilteredEvents({ category });
+				const options = {
+					category,
+				};
+				const events = await this.getFilteredEvents(options);
+				this.populateEventsSearchContainer(events);
+			});
+		});
+
+		retryQuerySelector('#filterClassification', (element) => {
+			element.addEventListener('change', async () => {
+				const classification = element.value;
+				const options = {
+					classification,
+				};
+				const events = await this.getFilteredEvents(options);
 				this.populateEventsSearchContainer(events);
 			});
 		});
