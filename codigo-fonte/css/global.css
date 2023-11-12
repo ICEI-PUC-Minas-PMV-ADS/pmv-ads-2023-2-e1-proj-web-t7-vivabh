@@ -88,4 +88,7 @@ h6 {
 	.container {
 		padding: 0 2.5rem;
 	}
+	.helloUser {
+		font-size: 1.4rem;
+	}
 }

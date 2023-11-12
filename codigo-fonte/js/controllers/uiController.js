@@ -64,11 +64,20 @@ class UIController {
 		const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
 		if (currentUser) {
-			retryQuerySelector('#main-header .nav-menu', (element) => {
-				element.innerHTML = `<h5>Olá, ${currentUser.name}!</h5> <a href="/admin" onclick="route()">Seus eventos</a>`;
+			const navs = ['nav-menu', 'drawer-menu'];
+
+			navs.forEach((nav) => {
+				retryQuerySelector(`#main-header .${nav}`, (element) => {
+					element.innerHTML = `<h5 class='helloUser'>Olá, ${currentUser.name}!</h5> <a class='logout' href="/">Sair</a> <a href="/admin" onclick="route()">Seus eventos</a>`;
+				});
 			});
-			retryQuerySelector('#main-header .drawer-menu', (element) => {
-				element.innerHTML = `<h5>Olá, ${currentUser.name}!</h5> <a href="/admin" onclick="route()">Seus eventos</a>`;
+
+			navs.forEach((nav) => {
+				retryQuerySelector(`#main-header .${nav} .logout`, (element) => {
+					element.addEventListener('click', () => {
+						localStorage.removeItem('currentUser');
+					});
+				});
 			});
 		}
 	}
