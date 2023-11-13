@@ -41,11 +41,21 @@ export const createInitialData = () => {
 			{
 				id: 1,
 				name: 'PAUL MCCARTNEY - BH',
-				description: 'Uma da últimas chance de ver um dos maiores artistas da história em Belo Horizonte',
+				description: `Não perca esta rara oportunidade de testemunhar a lenda viva da música, Sir Paul McCartney, em uma noite extraordinária em Belo Horizonte. Este evento histórico promete ser uma experiência inesquecível, onde você terá a chance única de vivenciar a genialidade musical de um dos maiores artistas da história.
+<br>
+<br>
+				Prepare-se para uma apresentação que abrange décadas de sucesso, desde os dias icônicos dos Beatles até suas músicas solo mais recentes. Paul McCartney, com sua voz lendária e talento incomparável, levará o público a uma jornada musical cativante.
+<br>
+<br>
+				Além do espetáculo musical inigualável, o evento oferecerá uma produção visual espetacular, com efeitos de luz e palco que complementarão perfeitamente a atmosfera mágica. Desfrute de uma noite sob as estrelas, imerso na energia vibrante e no legado duradouro deste ícone da música.
+<br>
+<br>
+				Garanta seu lugar nesta noite especial, onde a história da música ganha vida. Não perca a chance de fazer parte deste momento único e presenciar Paul McCartney ao vivo em Belo Horizonte. Uma experiência que ficará gravada na memória de todos os fãs e amantes da música.
+					`,
 				date: new Date(2023, 11, 3),
-				time: 1609459200000, // January 1, 2023, 00:00:00 UTC
+				time: 1609459200000,
 				address: 'Arena Mrv, Rua Cristina Maria de Assis, 202 - Califórnia',
-				image: 'assets/eventos/evento-show1.jpg',
+				image: '/assets/eventos/evento-show1.jpg',
 				category: categoryRepository.getAll()[3],
 				classification: '12 anos',
 				quantity: 100,
@@ -58,7 +68,7 @@ export const createInitialData = () => {
 				date: new Date(2023, 10, 22),
 				time: 1610745600000, // January 15, 2023, 00:00:00 UTC
 				address: 'Mineirão, Av. Antônio Abrahão Caram, 1001 - São José',
-				image: 'assets/eventos/evento-esportel1.jpeg',
+				image: '/assets/eventos/evento-esportel1.jpeg',
 				category: categoryRepository.getAll()[1],
 				classification: 'Livre',
 				quantity: 50,
@@ -71,7 +81,7 @@ export const createInitialData = () => {
 				date: new Date(2023, 10, 25),
 				time: 1607433600000, // December 8, 2023, 00:00:00 UTC
 				address: 'Moradia I, Av. Fleming 394, Ouro preto',
-				image: 'assets/eventos/evento-festas1.jfif',
+				image: '/assets/eventos/evento-festas1.jfif',
 				category: categoryRepository.getAll()[2],
 				classification: '18 anos',
 				quantity: 80,
@@ -85,7 +95,7 @@ export const createInitialData = () => {
 				date: new Date(2023, 11, 22),
 				time: 1611081600000, // December 22, 2023, 00:00:00 UTC
 				address: 'Palácio das Artes, Av. Afonso Pena, 1537 - Centro',
-				image: 'assets/eventos/evento-show2.webp',
+				image: '/assets/eventos/evento-show2.webp',
 				category: categoryRepository.getAll()[3],
 				classification: '16 anos',
 				quantity: 120,
@@ -94,11 +104,12 @@ export const createInitialData = () => {
 			{
 				id: 5,
 				name: 'Mostra de Curtas 3D - Realidade Virtual',
-				description: 'Arte digital francesa chega a BH com filmes em realidade virtual e instalação.',
+				description:
+					'Arte digital francesa chega a BH com filmes em realidade virtual e instalação.',
 				date: new Date(2023, 10, 26),
 				time: 1611664000000, // December 29, 2023, 00:00:00 UTC
 				address: 'Palácio das Artes, Av. Afonso Pena, 1537 - Centro',
-				image: 'assets/eventos/evento-cultural1.jpg',
+				image: '/assets/eventos/evento-cultural1.jpg',
 				category: categoryRepository.getAll()[0],
 				classification: 'Livre',
 				quantity: 150,
@@ -107,11 +118,13 @@ export const createInitialData = () => {
 			{
 				id: 6,
 				name: '“Nossa Modernidade”',
-				description: 'Exposição: “Nossa Modernidade” em homenagem a Yara Tupynambá',
+				description:
+					'Exposição: “Nossa Modernidade” em homenagem a Yara Tupynambá',
 				date: new Date(2024, 0, 5),
 				time: 1641369600000, // January 5, 2024, 00:00:00 UTC
-				address: 'Errol Flynn Galeria de Arte - Rua Curitiba, 1862 - Bairro Lourdes',
-				image: 'assets/eventos/evento-cultural2.webp',
+				address:
+					'Errol Flynn Galeria de Arte - Rua Curitiba, 1862 - Bairro Lourdes',
+				image: '/assets/eventos/evento-cultural2.webp',
 				category: categoryRepository.getAll()[0],
 				classification: 'Livre',
 				quantity: 60,
@@ -120,12 +133,11 @@ export const createInitialData = () => {
 			{
 				id: 7,
 				name: 'Atlético-MG x Grêmio',
-				description:
-					'Jogo válido pela 35º rodada do Brasileirão.',
+				description: 'Jogo válido pela 35º rodada do Brasileirão.',
 				date: new Date(2023, 10, 26),
 				time: 1641974400000, // January 12, 2024, 00:00:00 UTC
 				address: 'Arena Mrv, Rua Cristina Maria de Assis, 202 - Califórnia',
-				image: 'assets/eventos/evento-esportel2.jpg',
+				image: '/assets/eventos/evento-esportel2.jpg',
 				category: categoryRepository.getAll()[1],
 				classification: 'Livre',
 				quantity: 100,
@@ -134,11 +146,12 @@ export const createInitialData = () => {
 			{
 				id: 8,
 				name: 'MADEIRADA FANTASIA 172',
-				description: 'Rolezinho da odonto da UFMG, a madeirada tá chegando para te proporcionar aquela festa universitária de respeito',
+				description:
+					'Rolezinho da odonto da UFMG, a madeirada tá chegando para te proporcionar aquela festa universitária de respeito',
 				date: new Date(2023, 10, 17),
 				time: 1642579200000, // January 19, 2024, 00:00:00 UTC
 				address: 'Espaço Master, Rua Cláudio Joaquim Antunes, 343 Braúnas',
-				image: 'assets/eventos/evento-festas2.jfif',
+				image: '/assets/eventos/evento-festas2.jfif',
 				category: categoryRepository.getAll()[2],
 				classification: '14 anos',
 				quantity: 90,
@@ -152,7 +165,7 @@ export const createInitialData = () => {
 				date: new Date(2023, 11, 22),
 				time: 1643184000000,
 				address: 'Arena Hall - Av. Nossa Sra. do Carmo,230',
-				image: 'assets/eventos/evento-showl3.webp',
+				image: '/assets/eventos/evento-showl3.webp',
 				category: categoryRepository.getAll()[3],
 				classification: '18 anos',
 				quantity: 80,

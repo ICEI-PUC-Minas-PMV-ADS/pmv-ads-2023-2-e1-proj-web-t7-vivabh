@@ -11,6 +11,7 @@ export const routes = {
 	'/admin/eventos/editar': '/views/admin/edit-event.html',
 	'/eventos': '/views/events/index.html',
 	'/admin': '/views/admin/index.html',
+	'/eventos/detalhes': '/views/events/card-evento.html',
 };
 
 const protectedRoutes = [
@@ -27,6 +28,10 @@ const callControllerByRoute = (pathName) => {
 	if (protectedRoutes.includes(pathName) && !isAuthenticated()) {
 		window.location = '/login';
 		return;
+	}
+
+	if (pathName === '/eventos/detalhes') {
+		eventsController.populateEventDetails();
 	}
 
 	if (pathName === '/admin') {

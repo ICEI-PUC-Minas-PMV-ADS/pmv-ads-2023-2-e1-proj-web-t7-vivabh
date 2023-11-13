@@ -36,7 +36,7 @@ export class EventsRepository {
 	}
 
 	get(id) {
-		return this.events.find((event) => event.getId() === id);
+		return this.events.find((event) => String(event.id) === id);
 	}
 
 	update(id, updatedEvent) {

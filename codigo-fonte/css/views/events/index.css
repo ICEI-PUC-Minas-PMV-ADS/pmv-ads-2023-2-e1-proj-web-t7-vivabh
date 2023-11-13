@@ -1,4 +1,5 @@
 @import './new.css';
+@import './details.css';
 
 #events-container {
 	display: flex;

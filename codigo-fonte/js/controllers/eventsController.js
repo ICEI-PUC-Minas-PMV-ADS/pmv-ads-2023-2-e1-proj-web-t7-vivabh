@@ -183,12 +183,131 @@ export class EventsController {
 		return deleteButton;
 	}
 
+	async getEventFromQueryParams() {
+		const currentURL = window.location.href;
+		const urlParams = new URLSearchParams(currentURL.split('?')[1]);
+		const id = urlParams.get('id');
+		const event = await this.getEvent(id);
+
+		if (!event) {
+			alert('Evento não encontrado!');
+			window.location.href = '/eventos';
+			return;
+		}
+
+		return event;
+	}
+
+	buildEventDetails(event) {
+		const { month, day } = formatDate(event.date);
+		return `<div class="card">
+		<img class="card-img-top" src="${event.image}" alt="Imagem do evento ${event.name}" />
+		<div class="card-body">
+			<h5 class="card-title">${event.name}</h5>
+			<p class="card-text">Data: ${day} de ${month}</p>
+			<p class="card-text">
+			 ${event.description}
+			</p>
+			<p class="card-text">
+				<small class="text-muted">Localização: ${event.address}</small>
+			</p>
+		</div>
+	</div>
+</div>
+
+`;
+	}
+
+	async getSuggestedEventsFromSameCategory(event) {
+		const events = await this.getByCategory(event.category.name);
+		return events.filter((item) => item.id !== event.id).slice(0, 3);
+	}
+
+	shortenText(text, maxLength) {
+		if (text.length <= maxLength) {
+			return text;
+		} else {
+			return text.substring(0, maxLength - 3) + '...';
+		}
+	}
+
+	buildSuggestedEvents(suggestedEvents, element) {
+		const suggestedEventsContainer = document.createElement('div');
+
+		suggestedEventsContainer.className = 'custom-container mt-4';
+
+		suggestedEventsContainer.innerHTML = `
+					<h2 class="custom-heading">Eventos Sugeridos</h2>
+					<div class="custom-row">
+					</div>
+				`;
+
+		const suggestedEventsRow =
+			suggestedEventsContainer.querySelector('.custom-row');
+
+		suggestedEvents.forEach((event) => {
+			const { month, day } = formatDate(event.date);
+			const anchor = document.createElement('a');
+			anchor.href = `/eventos/detalhes?id=${event.id}`;
+
+			const eventContainer = document.createElement('div');
+			eventContainer.className = 'custom-col';
+
+			const description = this.shortenText(event.description, 30);
+
+			eventContainer.innerHTML = `
+						<div class='custom-card'>
+							<img loading="lazy" class='img-custom-card' src='${event.image}' alt='${event.name}' />
+							<div class='custom-card-body'>
+								<h5 class='custom-card-title'>${event.name}</h5>
+								<p class='custom-card-text'>Data: ${day} de ${month}</p>
+								<p class='custom-card-text'>
+									${description}
+								</p>
+							</div>
+						</div>
+					`;
+
+			anchor.appendChild(eventContainer);
+
+			suggestedEventsRow.appendChild(anchor);
+
+			suggestedEventsContainer.appendChild(suggestedEventsRow);
+
+			element.appendChild(suggestedEventsContainer);
+		});
+	}
+
+	populateEventDetails() {
+		retryQuerySelector('#eventDetails', async (element) => {
+			element.innerHTML = '';
+			const event = await this.getEventFromQueryParams();
+
+			const content = this.buildEventDetails(event);
+
+			element.innerHTML = content;
+
+			const suggestedEvents = await this.getSuggestedEventsFromSameCategory(
+				event
+			);
+
+			if (suggestedEvents.length === 0) return;
+
+			this.buildSuggestedEvents(suggestedEvents, element);
+		});
+	}
+
 	async populateEventsContainer(element, events, isAdminPanel = false) {
 		const fragment = document.createDocumentFragment();
 		events.forEach((event) => {
 			const { month, day } = formatDate(event.date);
+			const anchor = document.createElement('a');
+			anchor.href = `/eventos/detalhes?id=${event.id}`;
+
 			const eventContainer = document.createElement('div');
 			eventContainer.className = 'event';
+
+			const description = this.shortenText(event.description, 65);
 
 			eventContainer.innerHTML = `
         <div class='image-container'>
@@ -201,9 +320,10 @@ export class EventsController {
           </div>
           <div class='content'>
             <h2>${event.name}</h2>
-            <p class='description'>descricao ${event.description}</p>
+            <p class='description'> ${description}</p>
           </div>
         </div>
+
       `;
 
 			if (isAdminPanel) {
@@ -214,7 +334,9 @@ export class EventsController {
 				eventContainer.appendChild(buttonsContainer);
 			}
 
-			fragment.appendChild(eventContainer);
+			anchor.appendChild(eventContainer);
+
+			fragment.appendChild(anchor);
 		});
 
 		element.innerHTML = '';
