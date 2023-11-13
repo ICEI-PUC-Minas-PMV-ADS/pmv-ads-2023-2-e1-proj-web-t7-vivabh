@@ -34,6 +34,10 @@ const callControllerByRoute = (pathName) => {
 		eventsController.populateEventDetails();
 	}
 
+	if (pathName === '/admin/eventos/editar') {
+		eventsController.populateEditForm();
+	}
+
 	if (pathName === '/admin') {
 		eventsController.populateEventsAdminPanel();
 	}

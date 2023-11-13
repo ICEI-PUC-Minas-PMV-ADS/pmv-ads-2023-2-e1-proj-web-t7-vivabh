@@ -42,8 +42,16 @@ export class EventsController {
 		return newEvent;
 	}
 
+	getIdFromQueryParams() {
+		const currentURL = window.location.href;
+		const urlParams = new URLSearchParams(currentURL.split('?')[1]);
+		const id = urlParams.get('id');
+		return id;
+	}
+
 	async updateEvent(event) {
-		this.eventsRepository.update(event.id, event);
+		const id = this.getIdFromQueryParams();
+		this.eventsRepository.update(id, event);
 		return event;
 	}
 
@@ -61,12 +69,13 @@ export class EventsController {
 		return this.eventsRepository.getClassifications();
 	}
 
-	previewImage() {
+	previewImage(isEdit = false) {
+		const fileInputSelection = isEdit ? '#edit-event-form' : '#new-event-form';
 		const fileInput = document.querySelector(
-			'#new-event-form .image-container input[type=file]#image'
+			`${fileInputSelection} .image-container input[type=file]#image`
 		);
 		const imagePreview = document.querySelector(
-			'#new-event-form .image-container #image-preview'
+			`${fileInputSelection} .image-container #image-preview`
 		);
 
 		if (fileInput.files && fileInput.files[0]) {
@@ -161,7 +170,7 @@ export class EventsController {
 		editButton.className = 'edit';
 		editButton.innerHTML = `<img class='button' src='assets/icons/edit.svg' ='Editar evento' />`;
 		editButton.addEventListener('click', () => {
-			window.location.href = `/editar-evento?id=${event.id}`;
+			window.location.href = `/admin/eventos/editar?id=${event.id}`;
 		});
 		return editButton;
 	}
@@ -196,6 +205,87 @@ export class EventsController {
 		}
 
 		return event;
+	}
+
+	async handleEditFormSubmission(event, _form) {
+		event.preventDefault();
+
+		const name = document.querySelector('input[name="name"]').value;
+		const description = document.querySelector(
+			'textarea[name="description"]'
+		).value;
+		const date = document.querySelector('input[name="date"]').value;
+		const image = await this.returnImageFromFieldFile();
+		const category = document.querySelector('select[name="category"]').value;
+		const time = document.querySelector('input[name="time"]').value;
+		const address = document.querySelector('input[name="address"]').value;
+		const quantity = document.querySelector('input[name="quantity"]').value;
+		const classification = document.querySelector(
+			'select[name="classification"]'
+		).value;
+
+		const updatedEvent = {
+			name,
+			description,
+			date,
+			image,
+			category,
+			time,
+			address,
+			quantity,
+			classification,
+		};
+
+		const result = await this.updateEvent(updatedEvent);
+
+		if (result) {
+			alert('Evento atualizado com sucesso!');
+			localStorage.removeItem('preview-image');
+			window.location.href = '/admin';
+			return;
+		}
+
+		alert('Preencha todos os campos!');
+	}
+
+	async populateEditForm() {
+		const event = await this.getEventFromQueryParams();
+		retryQuerySelector('#edit-event-form', (form) => {
+			form.addEventListener('submit', async (event) => {
+				await this.handleEditFormSubmission(event, form);
+			});
+		});
+
+		retryQuerySelector(
+			'#edit-event-form .image-container input[type=file]#image',
+			(el) => {
+				el.addEventListener('change', () => {
+					this.previewImage(true);
+				});
+			}
+		);
+
+		const classifications = this.getClassifications();
+
+		this.createOptions('classification', classifications);
+
+		retryQuerySelector('#edit-event-form', (form) => {
+			form.name.value = event.name;
+			form.description.value = event.description;
+			form.date.value = event.date;
+			form.category.value = event.category.name;
+			form.time.value = event.time;
+			form.address.value = event.address;
+			form.quantity.value = event.quantity;
+			form.classification.value = event.classification;
+		});
+
+		retryQuerySelector(
+			'#edit-event-form .image-container #image-preview',
+			(el) => {
+				el.src = event.image;
+			}
+		);
 	}
 
 	buildEventDetails(event) {
@@ -302,6 +392,7 @@ export class EventsController {
 		events.forEach((event) => {
 			const { month, day } = formatDate(event.date);
 			const anchor = document.createElement('a');
+			anchor.className = 'event-anchor';
 			anchor.href = `/eventos/detalhes?id=${event.id}`;
 
 			const eventContainer = document.createElement('div');
@@ -331,7 +422,10 @@ export class EventsController {
 				buttonsContainer.className = 'buttons-container';
 				buttonsContainer.appendChild(this.createEditButton(event));
 				buttonsContainer.appendChild(this.createDeleteButton(event));
+				buttonsContainer.appendChild(this.createSeeDeailsButton(event));
 				eventContainer.appendChild(buttonsContainer);
+				fragment.appendChild(eventContainer);
+				return;
 			}
 
 			anchor.appendChild(eventContainer);
@@ -341,6 +435,19 @@ export class EventsController {
 
 		element.innerHTML = '';
 		element.appendChild(fragment);
+	}
+
+	createSeeDeailsButton(event) {
+		const seeDetailsButton = document.createElement('button');
+		seeDetailsButton.className = 'see-details';
+		seeDetailsButton.innerHTML = `
+						<img class='button' src='assets/icons/eye.svg' alt='Ver detalhes do evento' />
+					`;
+		seeDetailsButton.addEventListener('click', () => {
+			window.location.href = `/eventos/detalhes?id=${event.id}`;
+		});
+
+		return seeDetailsButton;
 	}
 
 	async populateEventsAdminPanel() {

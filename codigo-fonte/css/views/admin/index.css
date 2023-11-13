@@ -36,15 +36,16 @@
 	position: relative;
 }
 
-#admin-panel .event .buttons-container {
+#admin-panel .buttons-container {
 	position: absolute;
+	z-index: 10000000;
 	display: flex;
 	gap: 0.5rem;
 	top: 5%;
 	right: 0.5rem;
 }
 
-#admin-panel .event .buttons-container button {
+#admin-panel .buttons-container button {
 	background: #4361ee;
 	border-radius: 99999px;
 	border: none;
@@ -53,12 +54,12 @@
 	transition: all 0.3s ease-in-out;
 }
 
-#admin-panel .event .buttons-container button:hover {
+#admin-panel .buttons-container button:hover {
 	background: #3c47e9;
 	padding: 0.5rem 1.5rem;
 }
 
-#admin-panel .event .buttons-container button img {
+#admin-panel .buttons-container button img {
 	width: 14px;
 	height: 14px;
 }

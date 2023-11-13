@@ -39,6 +39,10 @@ export class EventsRepository {
 		return this.events.find((event) => String(event.id) === id);
 	}
 
+	getByName(name) {
+		return this.events.find((event) => event.name === name);
+	}
+
 	update(id, updatedEvent) {
 		const eventToUpdate = this.get(id);
 		const fieldsToUpdate = [
@@ -57,6 +61,10 @@ export class EventsRepository {
 			for (const field of fieldsToUpdate) {
 				eventToUpdate[field] = updatedEvent[field] || eventToUpdate[field];
 			}
+
+			this.events = this.events.map((event) =>
+				event.id === eventToUpdate.id ? eventToUpdate : event
+			);
 
 			this.saveEvents();
 		}
