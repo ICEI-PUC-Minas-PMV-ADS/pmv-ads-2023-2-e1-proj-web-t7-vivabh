@@ -308,6 +308,46 @@ export class EventsController {
 `;
 	}
 
+	getEventsFromThisMonth() {
+		const events = this.eventsRepository.getAll();
+		const today = new Date();
+		const thisMonth = today.getMonth();
+		return events.filter((event) => {
+			const eventDate = new Date(event.date);
+			const eventMonth = eventDate.getMonth();
+			return eventMonth === thisMonth;
+		});
+	}
+
+	getEventsFromThisWeek() {
+		const events = this.eventsRepository.getAll();
+		const today = new Date();
+		const thisWeek = today.getDate();
+		return events.filter((event) => {
+			const eventDate = new Date(event.date);
+			const eventWeek = eventDate.getDate();
+			return eventWeek === thisWeek;
+		});
+	}
+
+	populateFromThisMonth() {
+		const events = this.getEventsFromThisMonth().slice(0, 6);
+
+		retryQuerySelector('#eventsFromThisMonth', (element) => {
+			this.populateEventsContainer(element, events);
+		});
+	}
+
+	populateFromThisWeek() {
+		const events = this.getEventsFromThisWeek().slice(0, 6);
+
+		retryQuerySelector('#eventsFromThisWeek', (element) => {
+			if (events && events.length > 0) {
+				this.populateEventsContainer(element, events);
+			}
+		});
+	}
+
 	async getSuggestedEventsFromSameCategory(event) {
 		const events = await this.getByCategory(event.category.name);
 		return events.filter((item) => item.id !== event.id).slice(0, 3);

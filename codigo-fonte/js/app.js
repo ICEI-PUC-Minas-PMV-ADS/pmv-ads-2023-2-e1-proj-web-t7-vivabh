@@ -59,6 +59,8 @@ const callControllerByRoute = (pathName) => {
 
 	if (pathName === '/') {
 		uiController.populateCategoriesNav();
+		eventsController.populateFromThisMonth();
+		eventsController.populateFromThisWeek();
 	}
 
 	if (pathName === '/login') {
