@@ -70,7 +70,7 @@
 	display: grid;
 	width: 100%;
 	grid-template-columns: repeat(3, 33%);
-	gap: 1rem;
+	gap: 2.2rem;
 	margin-bottom: 2rem;
 }
 
@@ -84,7 +84,7 @@
 	transition: all 0.3s ease-in-out;
 	overflow: hidden;
 	max-width: 343.047px;
-	max-height: 328.518px;
+	max-height: 278.518px;
 }
 #events-container .events .event .image-container,
 .events-cards .event .image-container {

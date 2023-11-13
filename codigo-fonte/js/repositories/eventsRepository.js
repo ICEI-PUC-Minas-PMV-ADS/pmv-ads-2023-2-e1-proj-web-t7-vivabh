@@ -1,4 +1,5 @@
 import { Event } from '../model/Event';
+import { categoryRepository } from './categoriesRepository';
 
 export class EventsRepository {
 	constructor() {
@@ -59,6 +60,11 @@ export class EventsRepository {
 
 		if (eventToUpdate) {
 			for (const field of fieldsToUpdate) {
+				if (field === 'category') {
+					updatedEvent[field] = categoryRepository.getByName(
+						updatedEvent[field]
+					);
+				}
 				eventToUpdate[field] = updatedEvent[field] || eventToUpdate[field];
 			}
 

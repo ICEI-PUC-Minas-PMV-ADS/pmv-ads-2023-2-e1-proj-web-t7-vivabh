@@ -2,6 +2,7 @@ import { formatDate, retryQuerySelector } from '../helpers.js';
 import { categoryRepository } from '../repositories/categoriesRepository.js';
 import { eventsRepository } from '../repositories/eventsRepository.js';
 import { userRepository } from '../repositories/usersRepository.js';
+import { v4 as uuidv4 } from 'uuid';
 
 export class EventsController {
 	constructor() {
@@ -30,10 +31,12 @@ export class EventsController {
 	async createEvent(event) {
 		const category = this.categoriesRepository.getByName(event.category);
 		const owner = this.userRepository.getCurrentUser();
+		const id = uuidv4();
 		let newEvent = {
 			...event,
 			category: category.name,
 			owner,
+			id,
 		};
 
 		newEvent = this.eventsRepository.add(newEvent);
@@ -266,9 +269,10 @@ export class EventsController {
 		);
 
 		const classifications = this.getClassifications();
+		const categories = this.getCategories();
 
+		this.createOptions('category', categories);
 		this.createOptions('classification', classifications);
-
 		retryQuerySelector('#edit-event-form', (form) => {
 			form.name.value = event.name;
 			form.description.value = event.description;
@@ -322,14 +326,25 @@ export class EventsController {
 	getEventsFromThisWeek() {
 		const events = this.eventsRepository.getAll();
 		const today = new Date();
-		const thisWeek = today.getDate();
+		const currentWeekNumber = this.getWeekNumber(today);
+
 		return events.filter((event) => {
 			const eventDate = new Date(event.date);
-			const eventWeek = eventDate.getDate();
-			return eventWeek === thisWeek;
+			const eventWeekNumber = this.getWeekNumber(eventDate);
+
+			return (
+				eventWeekNumber === currentWeekNumber ||
+				(eventWeekNumber === currentWeekNumber - 1 && today > eventDate)
+			);
 		});
 	}
-
+	getWeekNumber(date) {
+		const onejan = new Date(date.getFullYear(), 0, 1);
+		const weekNumber = Math.ceil(
+			((date - onejan) / 86400000 + onejan.getDay() + 1) / 7
+		);
+		return weekNumber;
+	}
 	populateFromThisMonth() {
 		const events = this.getEventsFromThisMonth().slice(0, 6);
 
