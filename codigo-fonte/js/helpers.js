@@ -21,5 +21,21 @@ export const formatDate = (date) => {
 
 	const month = originalDate.toLocaleString('default', { month: 'short' });
 	const day = originalDate.getUTCDate();
-	return { month, day };
+	const year = originalDate.getUTCFullYear();
+	return { month, day, year };
+};
+
+export const getWeekNumber = (date) => {
+	const onejan = new Date(date.getFullYear(), 0, 1);
+	const weekNumber = Math.ceil(
+		((date - onejan) / 86400000 + onejan.getDay() + 1) / 7
+	);
+	return weekNumber;
+};
+export const shortenText = (text, maxLength) => {
+	if (text.length <= maxLength) {
+		return text;
+	} else {
+		return text.substring(0, maxLength - 3) + '...';
+	}
 };

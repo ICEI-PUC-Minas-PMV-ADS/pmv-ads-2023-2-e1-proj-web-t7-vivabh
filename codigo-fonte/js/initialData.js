@@ -64,7 +64,26 @@ export const createInitialData = () => {
 			{
 				id: 2,
 				name: 'Cruzeiro x Vasco',
-				description: 'Jogo válido pela 33º rodada do Brasileirão.',
+				description: `
+				Cruzeiro x Vasco - Jogo válido pela 33ª rodada do Brasileirão.
+
+<br><br>
+
+Dois gigantes do futebol brasileiro, Cruzeiro e Vasco, se encontrarão em campo para um confronto emocionante na 33ª rodada do Campeonato Brasileiro. Ambas as equipes estão determinadas a conquistar a vitória e somar pontos cruciais na tabela de classificação.
+
+<br><br>
+
+Os jogos entre Cruzeiro e Vasco sempre foram marcados por rivalidade, lances espetaculares e reviravoltas surpreendentes. Este não será diferente, prometendo uma partida repleta de emoções do início ao fim. Prepare-se para assistir a jogadas incríveis, dribles habilidosos e gols que ficarão na memória dos torcedores.
+
+<br><br>
+
+Além da rivalidade em campo, a atmosfera nos estádios estará carregada de emoção, com as torcidas empurrando seus times rumo à vitória. Se você é um verdadeiro apaixonado por futebol, não pode perder esse duelo entre dois clubes com histórias gloriosas e legados no esporte nacional.
+
+<br><br>
+
+Portanto, marque na sua agenda, reúna os amigos e a família, e venha torcer pelo seu time do coração. Esteja preparado para viver cada lance, vibrar com os gols e celebrar a paixão pelo futebol brasileiro. Cruzeiro x Vasco na 33ª rodada do Brasileirão é mais do que um jogo, é um espetáculo esportivo que promete ficar na memória de todos os amantes do futebol. Não fique de fora dessa experiência única!
+
+				`,
 				date: new Date(2023, 10, 22),
 				time: 1610745600000, // January 15, 2023, 00:00:00 UTC
 				address: 'Mineirão, Av. Antônio Abrahão Caram, 1001 - São José',
@@ -77,7 +96,25 @@ export const createInitialData = () => {
 			{
 				id: 3,
 				name: 'BAILE MACABRO',
-				description: 'Rolezinho a fantasia na moradia da UFMG',
+				description: `
+				'BAILE MACABRO'
+
+<br><br>
+
+Prepare-se para uma experiência única: o "Baile Macabro" está chegando! Este não é apenas um evento, mas sim um rolezinho à fantasia que tomará conta da moradia da UFMG. Uma celebração de arrepiar, repleta de diversão, música e surpresas.
+
+<br><br>
+
+Coloque sua fantasia mais criativa, reúna seus amigos e venha fazer parte desse evento memorável. O "Baile Macabro" promete uma noite cheia de animação, onde a fantasia é a protagonista e a diversão não tem limites.
+
+<br><br>
+
+Dance ao som de músicas envolventes, participe de concursos de fantasias e desfrute de uma atmosfera única, repleta de energia positiva. Esteja preparado para momentos inesquecíveis e para criar memórias que durarão para sempre.
+
+<br><br>
+
+Não perca a oportunidade de participar do "Baile Macabro" na moradia da UFMG. A diversão está garantida, e a única regra é se deixar levar pela magia dessa noite especial. Venha viver essa experiência incrível e faça parte de um evento que promete ser o destaque da temporada!
+				`,
 				date: new Date(2023, 10, 25),
 				time: 1607433600000, // December 8, 2023, 00:00:00 UTC
 				address: 'Moradia I, Av. Fleming 394, Ouro preto',
