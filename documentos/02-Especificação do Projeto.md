@@ -53,7 +53,7 @@
 
 | ID    | Descrição                                                                           | Prioridade |
 | ----- | ----------------------------------------------------------------------------------- | ---------- |
-| RF-01 | Listar eventos anuais, separados por datas.                                         | Alta       |
+| RF-01 | Listar eventos anuais, separados por categoria.                                     | Alta       |
 | RF-02 | Recomendar eventos similares.                                                       | Baixa      |
 | RF-03 | Mostrar os atrativos e dicas sobre cada evento.                                     | Média      |
 | RF-04 | Possibilitar a busca por eventos de diferentes critérios e mais informais e detalhes| Alta       |
