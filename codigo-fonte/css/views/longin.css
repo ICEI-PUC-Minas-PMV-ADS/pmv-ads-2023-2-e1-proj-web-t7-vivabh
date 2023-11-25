@@ -72,10 +72,10 @@ background-image: linear-gradient(
 
 }
 
-#formlogin.Esqueceu-senha{
+#formlogin .Esqueceu-senha{
     color: #FFF;
     text-decoration: none;
-
+    display: none;
 }
 
 #formlogin .criar-conta {
