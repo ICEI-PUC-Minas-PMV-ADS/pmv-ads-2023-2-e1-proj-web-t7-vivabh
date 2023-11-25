@@ -1,16 +1,31 @@
 # Plano de Testes de Software
 
-[Apresente os cenários de testes a serem utilizados na realização dos testes da aplicação. Escolha cenários de testes que demonstrem os requisitos sendo atendidos. ]
+Os requisitos para realização dos testes de software são:
+* Navegador de internet: Google Chrome, Mozilla Firefox ou Microsoft Edge. 
 
-Os testes funcionais a serem realizados na aplicação são descritos a seguir. [Utilize a estrutura abaixo para cada caso de teste]
+Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 
-|Caso de Teste    | CT-X - Título Caso de Teste |
+|Caso de Teste    | CT-1 - Verificação dos cards de evento |
 |:---|:---|
-| Requisitos Associados | RF-X |
-| Objetivo do Teste | Descrição do objetivo do teste |
-| Passos | Indicar passos para a execução do teste |
-| Critérios de êxito | Indicar os critérios de êxito  |
-| Responsável pela elaborar do caso de Teste | Nome do integrante da equipe |
+| Requisitos Associados | RF-01 A aplicação deve conter cards de seleção de categoria, onde o usuário poderá selecionar a categoria de evento desejada |
+| Objetivo do Teste | Verificar se ao clicar no card ira filtrar para categoria desejada |
+| Passos | <ol> <li> Abrir o arquivo html da em um navegador de internet; <li> Visualizar a página "Viva BH"; <li> Clicar no cards de seleção; <li> Verificar se foi filtrada a categoria conforme a Selecionado |
+| Critérios de êxito | A pagina de atualizar é filtar nos  eventos de acordo com a categoria selecionada |
+| Responsável por elaborar o caso de Teste | Igor Fonseca Amorim |
+
+---
+---
+
+|Caso de Teste    | CT-2 -  |
+|:---|:---|
+| Requisitos Associados | RF-02  |
+| Objetivo do Teste | Verificar  |
+| Passos | <ol> <li> Abrir o arquivo html da página  <li> Visualizar a página "; <li> Clicar  <li> Verificar do. |
+| Critérios de êxito | O ingrediente   |
+| Responsável por elaborar o caso de Teste | ------- |
+
+---
+--
  
 > **Links Úteis**:
 > - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
