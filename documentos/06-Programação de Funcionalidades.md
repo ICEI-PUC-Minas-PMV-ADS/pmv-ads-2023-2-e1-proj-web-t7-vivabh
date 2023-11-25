@@ -108,6 +108,10 @@ Categorias podem incluir música, esportes, arte, tecnologia, entretenimento, e 
 - Igor Fonseca Amorim
 - João Pedro Menezes Matias da Silva
 - Luiz Fernando de Almeida Dias
+- Igor Fonseca Amorim
+- Luciano Carvalho Couto Ferreira
+- Marcílio da Cruz França Júnior
+- Mariana Aparecida Rodrigues dos Santos
 
 
 ## Tela de pesquisar eventos
@@ -145,6 +149,10 @@ Categorias podem incluir música, esportes, arte, tecnologia, entretenimento, e 
   
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/5396d931-3ed3-4240-b346-4b66a8ad719d)
 
+#### Responsável
+
+- João Pedro Menezes Matias da Silva
+- Marcílio da Cruz França Júnior
 
 ### Login
 
@@ -181,6 +189,10 @@ Categorias podem incluir música, esportes, arte, tecnologia, entretenimento, e 
   ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/8b49a467-14b7-46c4-9d03-4409c10720f2)
 
 
+#### Responsável
+
+- Igor Fonseca Amorim
+- João Pedro Menezes Matias da Silva
 
 ### Criar conta
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/e8a4cf22-aed1-4def-ae36-7a018dc459ac)
@@ -215,25 +227,148 @@ Categorias podem incluir música, esportes, arte, tecnologia, entretenimento, e 
   
   ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/8b49a467-14b7-46c4-9d03-4409c10720f2)
 
+#### Responsável
 
+- Igor Fonseca Amorim
+- João Pedro Menezes Matias da Silva
 
 ### Criar evento
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/3e027393-70f8-41ba-940d-64b4ea643af5)
 
 
+- Centro da página com campos essenciais para nome, categoria, data, hora, localização e descrição do evento.
+- Opção para os organizadores adicionar imagenselacionada ao evento.
+- Botão claro e proeminente para "Criar Evento" após preenchimento do formulário.
+- Configurações avançadas, como número máximo de participantes.
+- Exibição de mensagens claras e informativas em caso de erros ou sucesso no processo de criação do evento.
+- Página projetada para ser responsiva, garantindo uma experiência consistente em dispositivos móveis e desktops.
+- Após a criação, link para a página de gerenciamento de eventos para editar, excluir.
 
+  #### Requisito atendido
 
-### Exlcuir evento
+- RNF-03	Facilidade de aprendizado
+- RNF-04	LGBD (Lei Geral de Proteção de Dados)
+- RNF-02	Responsividade
+
+  #### Artefatos da funcionalidade
+
+- views/admin/new-event.html
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/147b64d9-3dc1-419a-9608-9ad90e0f95a5)
+
+- js/controllers/eventsController.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/bdc60d03-8963-4520-8218-5d2d03b561bf)
+
+- js/model/Event.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/bba4a2a7-4930-44b0-b382-170657501f90)
+
+- js/repositories/eventsRepository.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/fbc9b19b-e789-4cb8-81ef-155132b11669)
+
+### Pagina de Admnistrador
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/b9f735b3-ab23-48d4-96f2-40c510400431)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/e182b62d-a01d-42a5-9f0e-0906385b6f80)
 
+- Exibição de uma lista completa de todos os eventos criados pelo usuário no site.
+- Adição de uma opção de exclusão para cada evento na lista, permitindo ao administrador remover eventos indesejados.
+- Solicitação de confirmação antes de excluir um evento, para evitar ações acidentais e proporcionar uma camada adicional de segurança.
+- Exibição de mensagens claras e informativas após a exclusão bem-sucedida de um evento ou em caso de erro.
+- Garantia de responsividade para uma experiência consistente em dispositivos móveis e desktops.
+- Navegação fácil entre diferentes áreas de administração, garantindo uma gestão eficiente.
+- Feedback claro após a exclusão, indicando que o evento foi removido com sucesso.
 
+
+- views/admin/index.html
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/36b17058-e4ca-4550-bd91-09676b57c1b3)
+- js/controllers/eventsController.js
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/bdc60d03-8963-4520-8218-5d2d03b561bf)
+
+- js/model/Event.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/bba4a2a7-4930-44b0-b382-170657501f90)
+
+
+- js/repositories/eventsRepository.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/fbc9b19b-e789-4cb8-81ef-155132b11669)
+
+  #### Requisito atendido
+
+- RNF-03	Facilidade de aprendizado
+- RNF-04	LGBD (Lei Geral de Proteção de Dados)
+- RNF-02	Responsividade
+
+#### Responsável
+
+- Luciano Carvalho Couto Ferreira
+- João Pedro Menezes Matias da Silva
+  
 ### Editar evento
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/ea7de332-1a9b-428d-869d-a72d73df347c)
+
+- Apresentação de um formulário preenchido com as informações atuais do evento, permitindo edições.
+- Opção para adição, remoção ou edição de imagens e mídia relacionada ao evento.
+
+#### Artefatos da funcionalidade
+
+- views/admin/edit-event.html
+
+- js/controllers/eventsController.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/bdc60d03-8963-4520-8218-5d2d03b561bf)
+
+- js/model/Event.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/bba4a2a7-4930-44b0-b382-170657501f90)
+
+- js/repositories/eventsRepository.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/fbc9b19b-e789-4cb8-81ef-155132b11669)
+
+  #### Requisito atendido
+
+- RNF-03	Facilidade de aprendizado
+- RNF-04	LGBD (Lei Geral de Proteção de Dados)
+- RNF-02	Responsividade
+
+  
+#### Responsável
+- João Pedro Menezes Matias da Silva
 
 
 ### Ver detalhes do evento
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/ff04b572-c976-494b-bba0-6948b97ce4e8)
+- Exibição detalhada das informações do evento, incluindo nome, data, hora, localização, categoria e descrição.
+      #### Artefatos da funcionalidade
 
+- views/admin/edit-event.html
 
+- js/controllers/eventsController.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/bdc60d03-8963-4520-8218-5d2d03b561bf)
+
+- js/model/Event.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/bba4a2a7-4930-44b0-b382-170657501f90)
+
+- js/repositories/eventsRepository.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/fbc9b19b-e789-4cb8-81ef-155132b11669)
+
+  #### Requisito atendido
+
+- RNF-03	Facilidade de aprendizado
+- RNF-04	LGBD (Lei Geral de Proteção de Dados)
+- RNF-02	Responsividade
+
+  
+#### Responsável
+
+- Igor Fonseca Amorim
+- Luiz Fernando de Almeida Dias
+- Mariana Aparecida Rodrigues dos Santos
 
  
