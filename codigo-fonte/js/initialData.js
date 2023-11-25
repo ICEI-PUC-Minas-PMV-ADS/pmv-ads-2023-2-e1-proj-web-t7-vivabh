@@ -202,7 +202,7 @@ Não perca a oportunidade de participar do "Baile Macabro" na moradia da UFMG. A
 				date: new Date(2023, 11, 22),
 				time: 1643184000000,
 				address: 'Arena Hall - Av. Nossa Sra. do Carmo,230',
-				image: '/assets/eventos/evento-showl3.webp',
+				image: '/assets/eventos/evento-show3.webp',
 				category: categoryRepository.getAll()[3],
 				classification: '18 anos',
 				quantity: 80,
