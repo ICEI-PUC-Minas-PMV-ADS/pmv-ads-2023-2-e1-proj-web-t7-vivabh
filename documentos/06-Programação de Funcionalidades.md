@@ -105,9 +105,9 @@ Categorias podem incluir música, esportes, arte, tecnologia, entretenimento, e 
 
 #### Responsável
 
-Igor Fonseca Amorim
-João Pedro Menezes Matias da Silva
-Luiz Fernando de Almeida Dias
+- Igor Fonseca Amorim
+- João Pedro Menezes Matias da Silva
+- Luiz Fernando de Almeida Dias
 
 
 ### Tela de pesquisar eventos
