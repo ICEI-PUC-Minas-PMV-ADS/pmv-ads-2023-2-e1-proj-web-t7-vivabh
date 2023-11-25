@@ -2,7 +2,6 @@
 
 Implementação da aplicação descritas por meio dos requisitos codificados. 
 
-[Utilize a estrutura abaixo para cada funcionalidade entregue na etapa]
 
 ### Tela inicial
 
@@ -12,8 +11,11 @@ Implementação da aplicação descritas por meio dos requisitos codificados.
 
 #### Requisito atendido
 
-[RF-X: adicione a descrição do requisito atendido]
-
+- RF-01: Listar eventos anuais, separados por datas.
+- RF-02	Recomendar eventos similares.
+- RNF-02	Responsividade
+- RNF-03	Facilidade de aprendizado
+- RNF-04	LGBD (Lei Geral de Proteção de Dados)
 
 #### Artefatos da funcionalidade
 
