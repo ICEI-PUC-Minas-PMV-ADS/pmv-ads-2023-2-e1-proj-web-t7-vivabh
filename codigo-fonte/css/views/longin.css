@@ -1,4 +1,5 @@
 #formlogin {
+    margin: 4rem auto;
     display: flex;
     border-radius: 50px;
     background-color: white;
@@ -62,12 +63,13 @@ background-image: linear-gradient(
 #formlogin input {
     width:50%;
     margin-right: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 12px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
     outline: none;
     border-radius: 20px;
+
 }
 
 #formlogin.Esqueceu-senha{
@@ -96,6 +98,7 @@ text-decoration: none;
     border-radius: 65px;
     background: #4361EE;
     color: white;
+    margin: 20px 0;
     border: none;
    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
 }
