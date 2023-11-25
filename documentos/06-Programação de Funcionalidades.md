@@ -110,22 +110,117 @@ Categorias podem incluir música, esportes, arte, tecnologia, entretenimento, e 
 - Luiz Fernando de Almeida Dias
 
 
-### Tela de pesquisar eventos
+## Tela de pesquisar eventos
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/bec67b05-45b7-4b49-a79c-0858466bd290)
 
+- Existem filtros de pesquisa para refinar os resultados. Isso pode incluir opções como categorias e classificação
+- Os resultados da pesquisa serão exibidos em uma grade, mostrando miniaturas de eventos acompanhadas por títulos, datas e locais.
+- Os usuários podem visualizar mais detalhes sobre cada evento clicando em sua miniatura ou título.
+- Assim como em outras partes do site, a tela de pesquisa deve ser responsiva para garantir uma experiência consistente em dispositivos móveis e desktops.
 
-### Filtragem de eventos
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/2ffae596-35ae-4718-a7b5-96f611ae2d97)
+  #### Requisito atendido
+
+- RF-01: Listar eventos anuais, separados por datas.
+- RF-02	Recomendar eventos similares.
+- RNF-02	Responsividade
+- RNF-03	Facilidade de aprendizado
+- RNF-04	LGBD (Lei Geral de Proteção de Dados)
+
+#### Artefatos da funcionalidade
+
+- views/eventos/index.html
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/a75c4d1d-1f6f-4ce6-839e-52337ec876de)
+
+
+- js/controllers/eventsController.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/bdc60d03-8963-4520-8218-5d2d03b561bf)
+
+- js/model/Event.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/bba4a2a7-4930-44b0-b382-170657501f90)
+
+- js/model/Cateory.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/5396d931-3ed3-4240-b346-4b66a8ad719d)
 
 
 ### Login
 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/84166c9f-9bd4-40ab-8f82-a0369e0e4e40)
+
+- No centro da página, tem campos claros para entrada de credenciais, como e-mail e senha.
+- Abaixo dos campos de credenciais, tem um botão de "Login" para os usuários que já possuem uma conta.
+- Utiliza o pacote bycript para segurança de senha do usuário
+- Um link para a página de registro de conta visível, incentivando novos usuários a se inscreverem.
+- Se houver erros durante o processo de login, mensagens claras e informativas devem serão exibidas. Da mesma forma, mensagens de sucesso indicam que o login foi realizado com êxito.
+
+#### Requisito atendido
+
+- RNF-03	Facilidade de aprendizado
+- RNF-04	LGBD (Lei Geral de Proteção de Dados)
+- 
+#### Artefatos da funcionalidade
+
+- views/login.html
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/e349f1e7-4528-4609-ba39-c4d2ed124abe)
+
+
+- js/controllers/userController.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/494d9e3f-b5a8-4be6-93d3-a7121b34b0fe)
+
+- js/model/User.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/865cbc7e-666c-4eee-a51a-4fc7abd2b56e)
+
+- js/repositories/userRepository.js
+  
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/8b49a467-14b7-46c4-9d03-4409c10720f2)
+
+
+
 ### Criar conta
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/e8a4cf22-aed1-4def-ae36-7a018dc459ac)
+
+- No centro da página, apresenta-se um formulário claro com campos para informações essenciais, como nome completo, e-mail, senha e confirmação de senha.
+
+- Um botão de "Registrar" deve ser visível abaixo do formulário para que os usuários possam enviar suas informações e criar suas contas.
+
+- Caso ocorram erros durante o processo de registro, mensagens claras e informativas aparem para o usuário.
+
+- A página de criação de conta esta responsiva para proporcionar uma experiência consistente em diferentes dispositivos.
+
+  #### Requisito atendido
+
+- RNF-03	Facilidade de aprendizado
+- RNF-04	LGBD (Lei Geral de Proteção de Dados)
+- RNF-02	Responsividade
+  
+#### Artefatos da funcionalidade
+
+- views/register.html
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/5f43ff08-f71f-41be-880b-914084189a00)
+- js/controllers/userController.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/494d9e3f-b5a8-4be6-93d3-a7121b34b0fe)
+
+- js/model/User.js
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/865cbc7e-666c-4eee-a51a-4fc7abd2b56e)
+
+- js/repositories/userRepository.js
+  
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/8b49a467-14b7-46c4-9d03-4409c10720f2)
+
 
 
 ### Criar evento
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/36000474/3e027393-70f8-41ba-940d-64b4ea643af5)
+
+
 
 
 ### Exlcuir evento
