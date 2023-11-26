@@ -73,6 +73,8 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 > - ---
 > - ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/ec382793-b54e-478f-b998-bf1fa282af8c)
 > - ---
+> ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/6b126437-6ca1-4070-b902-38bce120a664)
+>  ---
 >   ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/058f7252-9c36-4161-955d-51e506c81492)
 > ---
 > ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/332e7e59-349e-48b5-805a-f8e54ad2278e)
