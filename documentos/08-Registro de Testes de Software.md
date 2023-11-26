@@ -33,5 +33,5 @@ Teste: Pagina direciona eventos pela classificação selecionada para a idade de
 
 |Caso de Teste    | CT-X - Verificação se possibilita a busca por eventos de diferentes idades |
 |:---|:---|
-| Resultados obtidos | Funcionalidade obtem os resultados esperados.   |
+| Resultados obtidos | Funcionalidade obtem os resultados desejados.   |
 | Responsável pela execução do caso de Teste | Mariana Aparecida Rodrigues dos Santos |
