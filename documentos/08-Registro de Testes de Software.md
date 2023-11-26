@@ -20,3 +20,8 @@ CT-02 - Buscando eventos pela classificação de idades
 
 Teste: Selecionando icone de ver todos
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/145329783/04a685a4-2afc-450d-839a-2ad66d6fb0d3)
+
+CT-03 - Buscando eventos pela classificação de idades
+
+Teste: Selecionando idade pelo icone de classificação na página de eventos
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/145329783/84c5de2c-cbd0-4c44-a8d1-4db5905a5322)
