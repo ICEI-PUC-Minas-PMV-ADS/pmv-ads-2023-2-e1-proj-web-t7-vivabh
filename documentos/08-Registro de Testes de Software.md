@@ -10,3 +10,8 @@ Os resultados dos testes funcionais realizados na aplicação são descritos a s
 | Responsável pela execução do caso de Teste | Nome do integrante da equipe |
 
 [Inserir aqui as evidências de teste que podem ser apresentadas por print de telas ou por .gif de execução de teste]
+
+CT-01 - Buscando eventos pela classificação de idades
+
+Teste: Acessando pagina incial
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/145329783/02a4c716-9810-414c-91bd-10ac9e2ccac8)
