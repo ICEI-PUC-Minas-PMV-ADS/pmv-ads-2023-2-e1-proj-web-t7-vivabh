@@ -30,3 +30,8 @@ CT-04 - Buscando eventos pelo icone de classificação por idade
 
 Teste: Pagina direciona eventos pela classificação selecionada para a idade de 10 anos. 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/145329783/53afde42-5fd2-4334-89ab-f3c4fc68dd9c)
+
+|Caso de Teste    | CT-X - Verificação se possibilita a busca por eventos de diferentes idades |
+|:---|:---|
+| Resultados obtidos | Funcionalidade obtem os resultados esperados.   |
+| Responsável pela execução do caso de Teste | Mariana Aparecida Rodrigues dos Santos |
