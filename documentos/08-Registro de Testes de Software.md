@@ -51,4 +51,14 @@ Teste: Login no site
 CT-03 - Criação de conta, realização de login, realização de busca no filtro por tipo de evento.
 
 Teste: Acesso a pagina inicial
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/332e7e59-349e-48b5-805a-f8e54ad2278e)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/8e7df36c-28d4-448e-b5c6-d88ba6129ba5)
+CT-04 - Criação de conta, realização de login, realização de busca no filtro por tipo de evento.
+
+Teste: Busca no filtro por tipo de evento
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/7d1a1dc5-7720-4d90-bdd7-3943375c2003)
+CT-05 - Criação de conta, realização de login, realização de busca no filtro por tipo de evento.
+
+Teste: Direcionado para eventos culturais
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/40068895-392e-4e99-a4bd-da7127688288)
