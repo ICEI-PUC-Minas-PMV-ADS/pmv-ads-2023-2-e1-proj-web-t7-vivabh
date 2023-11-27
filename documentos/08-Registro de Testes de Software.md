@@ -35,7 +35,7 @@ Teste: Pagina direciona eventos pela classificação selecionada para a idade de
 
 |Caso de Teste    | CT-X - Verificação se possibilita a busca por eventos de diferentes idades |
 |:---|:---|
-| Resultados obtidos | Funcionalidade obtem os resultados desejados.   |
+| Resultados obtidos | Satisfatório   |
 | Responsável pela execução do caso de Teste | Mariana Aparecida Rodrigues dos Santos |
 
 Registro de Testes - 02
@@ -62,3 +62,8 @@ CT-05 - Criação de conta, realização de login, realização de busca no filt
 Teste: Direcionado para eventos culturais
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/40068895-392e-4e99-a4bd-da7127688288)
+
+|Caso de Teste    | CT-X - Criação de conta, realização de login, realização de busca no filtro por tipo de evento. |
+|:---|:---|
+| Resultados obtidos | Satisfatório  |
+| Responsável pela execução do caso de Teste | Igor Fonseca Amorim |
