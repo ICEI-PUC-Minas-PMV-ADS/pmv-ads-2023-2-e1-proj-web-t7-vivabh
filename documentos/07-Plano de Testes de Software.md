@@ -55,33 +55,7 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 | Objetivo do Teste                        | Verificar se o site permite a criação é o registro de conta                                                                                                                            |
 | Passos                                   | <ol> <li> Abrir o arquivo html da em um navegador de internet; <li> Visualizar a página "Viva BH"; <li> Clicar no criar conta; <li> Realizar o cadastro da conta  <li> validar o login |
 | Critérios de êxito                       | A pagina deve filtar os  eventos de acordo com a categoria selecionada                                                                                                                 |
-|  Responsável por elaborar o caso de Teste |                Igor Fonseca Amorim                                                                                                                                                                  |
-
- ---
----
-
-> ** Prints É video  dos teste **:
-> - video do testes ( PARA COLOCAR )
-> - Prints:
-> - ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/8e7df36c-28d4-448e-b5c6-d88ba6129ba5)
-> - ---
-> - ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/388c925a-084e-4eb0-9c1f-9b1b0ae0b73b)
-> - ---
-> - ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/40068895-392e-4e99-a4bd-da7127688288)
-> - ---
-> - ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/7d1a1dc5-7720-4d90-bdd7-3943375c2003)
-> - ---
-> - ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/ec382793-b54e-478f-b998-bf1fa282af8c)
-> - ---
-> ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/6b126437-6ca1-4070-b902-38bce120a664)
->  ---
->   ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/058f7252-9c36-4161-955d-51e506c81492)
-> ---
-> ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/332e7e59-349e-48b5-805a-f8e54ad2278e)
-> ---
-
----
-
+|  Responsável por elaborar o caso de Teste |                Igor Fonseca Amorim                                                                                                                                                                  
 
 
 
