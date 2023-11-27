@@ -11,7 +11,7 @@ Os resultados dos testes funcionais realizados na aplicação são descritos a s
 
 [Inserir aqui as evidências de teste que podem ser apresentadas por print de telas ou por .gif de execução de teste]
 
-Registro de Teste - 01
+* Registro de Teste - 01
 
 CT-01 - Buscando eventos pelo icone de classificação por idade
 
@@ -38,7 +38,7 @@ Teste: Pagina direciona eventos pela classificação selecionada para a idade de
 | Resultados obtidos | Satisfatório   |
 | Responsável pela execução do caso de Teste | Mariana Aparecida Rodrigues dos Santos |
 
-Registro de Testes - 02
+* Registro de Testes - 02
 
 CT-01 - Criação de conta, realização de login, realização de busca no filtro por tipo de evento.
 
