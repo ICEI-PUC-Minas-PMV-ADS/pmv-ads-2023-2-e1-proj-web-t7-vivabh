@@ -87,6 +87,21 @@ Obs: Para este Sprint foi organizado as atividades no Trello no link abaixo, já
 - Atualizar documentação (Especificação de Projeto) - Responsáveis: João e Igor;
 - Atualizar documentação (Projeto de Interface) - Responsáveis: João e Luciano;
 
+## Sprint Etapa 04 - Desenvolvimento da solução - Parte 2 -  | Periodo 30/10/2023 à 26/11/2023.
+
+Backlogs:
+
+- Programação das demais funcionalidades.
+
+- Plano de Testes de Software.
+
+- Registro de Testes de Software.
+
+Metodologia:
+
+- Dividimos nosso grupo em 2 subgrupos, o primeiro com João, Marcilio e Luciano que ficarão responsáveis pelos RF-01 e RF-04. O outro grupo Luiz, Mariana e Igor, ficará com o RF-02 e RF-03. Cada grupo deverá desenvolver os testes de sua respesctiva funcionalidade;
+
+- Decidimos retirar o cadastro de login de usuário que pesquisa enventos. Entendemos que gastaria muita energia do grupo, e prefirimos focar nas demaias funcionalidades.
 
 
 > **Links Úteis**:
