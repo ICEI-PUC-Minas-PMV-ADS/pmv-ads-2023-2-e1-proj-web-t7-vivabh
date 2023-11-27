@@ -54,6 +54,9 @@ Teste: Direcionado para o tipo de evento selecionado
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/40068895-392e-4e99-a4bd-da7127688288)
 
+Vídeo com a execução dos testes:
+https://drive.google.com/file/d/1wNveRm06Izne7Zv5_Lk7i2-idP6Nnu-1/view?usp=sharing
+
 |Caso de Teste    | CT-X - Criação de conta, realização de login, realização de busca no filtro por tipo de evento. |
 |:---|:---|
 | Resultados obtidos | Satisfatório  |
