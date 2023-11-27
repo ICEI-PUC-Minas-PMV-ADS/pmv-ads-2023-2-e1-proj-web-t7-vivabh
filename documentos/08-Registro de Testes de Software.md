@@ -59,7 +59,7 @@ Teste: Busca no filtro por tipo de evento
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/7d1a1dc5-7720-4d90-bdd7-3943375c2003)
 CT-05 - Criação de conta, realização de login, realização de busca no filtro por tipo de evento.
 
-Teste: Direcionado para eventos culturais
+Teste: Direcionado para o tipo de evento selecionado
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t7-vivabh/assets/141268716/40068895-392e-4e99-a4bd-da7127688288)
 
